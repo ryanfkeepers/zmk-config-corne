@@ -222,10 +222,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans          &trans          &trans           &trans       &kp CARET       &soft_off       &trans        &kp LS(RS(PERCENT))  &kp DOLLAR  &trans
-&trans  &trans  &trans          &kp UP_ARROW    &trans           &kp GRAVE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW      &none       &trans
-&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &trans          &trans          &trans        &trans               &trans      &trans
-                                &kp LGUI        &trans           &kp SPACE    &kp RET         &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp CARET       &soft_off       &trans        &kp PERCENT      &kp DOLLAR  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans      &trans
+                        &trans  &trans  &trans    &trans          &trans          &trans
             >;
 
             label = "VimNav";
