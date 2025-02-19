@@ -100,7 +100,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp CARET       &soft_off       &trans        &kp PERCENT      &kp DOLLAR  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp CARET       &kp LC(D)       &kp LC(U)     &kp PERCENT      &kp DOLLAR  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans        &trans           &trans      &trans
                         &trans  &trans  &trans    &trans          &trans          &trans
@@ -112,10 +112,10 @@
         OSWIN {
             display-name = "System";
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans   &kp F6   &kp F7   &kp F8   &kp F9     &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &kp F10  &kp F11  &kp F12  &kp F13  &kp F14    &trans  &trans  &trans  &trans  &trans   &trans
-                          &trans   &trans   &trans     &trans  &trans  &trans
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &kp PAGE_UP    &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)  &trans
+&trans  &trans   &kp F6   &kp F7   &kp F8   &kp F9     &trans              &trans              &kp PAGE_DOWN  &trans               &trans               &trans
+&trans  &kp F10  &kp F11  &kp F12  &kp F13  &kp F14    &trans              &trans              &trans         &trans               &trans               &trans
+                          &trans   &trans   &trans     &trans              &trans              &trans
             >;
 
             label = "Window";
