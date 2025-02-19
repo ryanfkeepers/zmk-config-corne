@@ -189,6 +189,8 @@
 &trans  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M      &kp COMMA     &kp DOT  &kp FSLH  &trans
                       &kp LGUI  &mo 1  &kp SPACE    &kp RET  &lt 2 TAB  &kp LEFT_ALT
             >;
+
+            label = "Alphabet";
         };
 
         SYMNUM {
@@ -206,6 +208,8 @@
 &trans      &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
                               &kp LGUI      &trans           &kp SPACE        &kp RET  &trans  &trans
             >;
+
+            label = "SymNum";
         };
 
         VIMNAV {
