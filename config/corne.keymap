@@ -257,9 +257,9 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        l3 {
-            if-layers = <1 2>;
-            then-layer = <3>;
+        SYSTEM {
+            if-layers = <1 2 3>;
+            then-layer = <4>;
         };
     };
 };
