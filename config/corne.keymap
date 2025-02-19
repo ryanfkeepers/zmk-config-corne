@@ -31,20 +31,6 @@
         };
     };
 
-    macros {
-        browsertab: browsertab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LCTRL>;
-        };
-    };
-
     combos { compatible = "zmk,combos"; };
 
     //
@@ -84,7 +70,7 @@
 &trans  &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB         &kp SEMICOLON  &kp RIGHT_BRACE    &kp LEFT_BRACE    &kp MINUS     &kp GRAVE      &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4           &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7       &kp NUMBER_8      &kp NUMBER_9  &kp NUMBER_0   &trans
 &trans  &trans        &trans        &kp LESS_THAN         &kp GREATER_THAN       &trans          &trans         &kp RIGHT_BRACKET  &kp LEFT_BRACKET  &trans        &kp BACKSLASH  &trans
-                                    &kp LGUI              &trans                 &trans          &kp RALT       &kp RSHIFT         &trans
+                                    &trans                &trans                 &trans          &kp RALT       &kp RSHIFT         &kp RGUI
             >;
 
             label = "SymNum";
@@ -109,7 +95,7 @@
             label = "VimNav";
         };
 
-        OSWIN {
+        VIEW {
             display-name = "System";
             bindings = <
 &trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &kp PAGE_UP    &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)  &trans
@@ -118,15 +104,15 @@
                           &trans   &trans   &trans     &trans              &trans              &trans
             >;
 
-            label = "Window";
+            label = "View";
         };
 
         SYSTEM {
             display-name = "extra";
             bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans            &bt BT_CLR    &trans        &bt BT_CLR_ALL  &trans        &bootloader  &trans
-&trans       &trans  &trans  &trans  &trans  &studio_unlock    &trans        &trans        &trans          &trans        &trans       &trans
-&trans       &trans  &trans  &trans  &trans  &trans            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &trans       &trans
+&trans  &bootloader  &trans  &trans  &trans  &trans            &bt BT_CLR    &trans        &bt BT_CLR_ALL  &trans        &bootloader  &trans
+&trans  &trans       &trans  &trans  &trans  &studio_unlock    &trans        &trans        &trans          &trans        &trans       &trans
+&trans  &trans       &trans  &trans  &trans  &trans            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &trans       &trans
                              &trans  &trans  &trans            &trans        &trans        &trans
             >;
 
