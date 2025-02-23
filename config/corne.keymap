@@ -31,7 +31,17 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        SYS_LAYER {
+            bindings = <&mo 3>;
+            key-positions = <26 27 28 38>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <500>;
+            layers = <0>;
+        };
+    };
 
     //
 
@@ -51,7 +61,7 @@
 &trans  &kp Q        &kp W       &kp E         &kp R            &kp T         &kp Y    &kp U        &kp I         &kp O       &kp P            &trans
 &trans  &lt 2 A      &hm LALT S  &hm LSHIFT D  &hm LGUI F       &kp G         &kp H    &hm RGUI J   &hm RSHIFT K  &hm RALT L  &kp SEMI         &trans
 &trans  &hm LCTRL Z  &kp X       &kp C         &kp V            &kp B         &kp N    &kp M        &kp COMMA     &kp DOT     &hm RCTRL SLASH  &trans
-                                 &kp EQUAL     &lt 1 BACKSPACE  &kp ESCAPE    &kp RET  &lt 3 SPACE  &kp COLON
+                                 &kp EQUAL     &lt 1 BACKSPACE  &kp ESCAPE    &kp RET  &lt 2 SPACE  &kp COLON
             >;
 
             label = "Alphabet";
@@ -67,10 +77,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB         &kp SEMICOLON  &kp RIGHT_BRACE    &kp LEFT_BRACE    &kp MINUS     &trans         &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4           &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7       &kp NUMBER_8      &kp NUMBER_9  &kp NUMBER_0   &trans
-&trans  &trans        &trans        &kp LESS_THAN         &kp GREATER_THAN       &trans          &kp GRAVE      &kp RIGHT_BRACKET  &kp LEFT_BRACKET  &trans        &kp BACKSLASH  &trans
-                                    &trans                &trans                 &trans          &kp RALT       &kp RSHIFT         &kp RGUI
+&trans  &trans        &kp EQUAL     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB         &kp SEMICOLON  &kp RIGHT_BRACE   &kp LEFT_BRACE  &kp MINUS     &trans         &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4           &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7      &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0   &trans
+&trans  &trans        &trans        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans          &kp GRAVE      &kp GREATER_THAN  &kp LESS_THAN   &trans        &kp BACKSLASH  &trans
+                                    &trans                &trans                 &trans          &kp RALT       &kp RSHIFT        &kp RGUI
             >;
 
             label = "SymNum";
@@ -86,25 +96,13 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp CARET       &kp LC(D)       &kp LC(U)     &kp PERCENT      &kp DOLLAR  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp H           &kp J           &kp K         &kp L            &none       &trans
-                        &trans  &trans  &trans    &trans          &trans          &trans
+&trans  &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &trans  &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)    &kp CARET       &kp LC(D)       &kp LC(U)     &kp PERCENT      &kp DOLLAR  &trans
+&trans  &trans              &trans              &trans  &trans               &trans                 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
+&trans  &trans              &kp LG(LEFT_ARROW)  &trans  &kp RG(RIGHT_ARROW)  &trans                 &kp H           &kp J           &kp K         &kp L            &none       &trans
+                                                &trans  &trans               &trans                 &trans          &trans          &trans
             >;
 
             label = "VimNav";
-        };
-
-        VIEW {
-            display-name = "System";
-            bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &kp PAGE_UP    &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)  &trans
-&trans  &trans   &kp F6   &kp F7   &kp F8   &kp F9     &trans              &kp LG(LEFT_ARROW)  &kp PAGE_DOWN  &kp RG(RIGHT_ARROW)  &trans               &trans
-&trans  &kp F10  &kp F11  &kp F12  &kp F13  &kp F14    &trans              &trans              &trans         &trans               &trans               &trans
-                          &trans   &trans   &trans     &trans              &trans              &trans
-            >;
-
-            label = "View";
         };
 
         SYSTEM {
@@ -120,12 +118,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        SYSTEM {
-            if-layers = <1 2 3>;
-            then-layer = <4>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
