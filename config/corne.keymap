@@ -83,10 +83,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans        &kp EQUAL     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB         &kp SEMICOLON  &kp RIGHT_BRACE   &kp LEFT_BRACE  &kp MINUS     &trans         &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4           &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7      &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0   &trans
-&trans  &trans        &trans        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans          &kp GRAVE      &kp GREATER_THAN  &kp LESS_THAN   &trans        &kp BACKSLASH  &trans
-                                    &trans                &trans                 &trans          &kp RALT       &kp RSHIFT        &kp RGUI
+&trans  &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL       &kp SEMICOLON  &kp RIGHT_BRACE    &kp LEFT_BRACE    &kp MINUS     &trans         &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4           &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7       &kp NUMBER_8      &kp NUMBER_9  &kp NUMBER_0   &trans
+&trans  &trans        &trans        &kp LESS_THAN         &kp GREATER_THAN       &kp TAB         &kp GRAVE      &kp RIGHT_BRACKET  &kp LEFT_BRACKET  &trans        &kp BACKSLASH  &trans
+                                    &trans                &trans                 &trans          &kp RALT       &kp RSHIFT         &kp RGUI
             >;
 
             label = "SymNum";
@@ -102,10 +102,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &trans  &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)    &kp CARET       &kp LC(D)       &kp LC(U)     &kp PERCENT      &kp DOLLAR  &trans
-&trans  &trans              &trans              &trans  &trans               &trans                 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
-&trans  &trans              &kp LG(LEFT_ARROW)  &trans  &kp RG(RIGHT_ARROW)  &trans                 &kp H           &kp J           &kp K         &kp L            &none       &trans
-                                                &trans  &trans               &trans                 &trans          &trans          &trans
+&trans  &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &kp LG(TAB)  &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)    &kp CARET       &kp LC(D)       &kp LC(U)     &kp PERCENT      &kp DOLLAR  &trans
+&trans  &trans              &trans              &trans       &trans               &trans                 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
+&trans  &trans              &kp LG(LEFT_ARROW)  &trans       &kp RG(RIGHT_ARROW)  &trans                 &kp H           &kp J           &kp K         &kp L            &none       &trans
+                                                &trans       &trans               &trans                 &trans          &trans          &trans
             >;
 
             label = "VimNav";
