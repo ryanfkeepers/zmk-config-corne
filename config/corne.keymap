@@ -10,30 +10,36 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
+        htr: hold_tap_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "HOLD_TAP_RIGHT";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <280>;
             quick_tap_ms = <0>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
-            quick-tap-ms = <200>;
+            quick-tap-ms = <175>;
             global-quick-tap;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <1 13 25 26 14 2 3 15 27 28 16 4 5 17 29>;
         };
 
-        shm: shift_homerow_mods {
+        htl: hold_tap_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_HOMEROW_MODS";
+            label = "HOLD_TAP_LEFT";
             #binding-cells = <2>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <280>;
             quick_tap_ms = <0>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
-            quick-tap-ms = <125>;
+            quick-tap-ms = <175>;
             global-quick-tap;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <6 18 30 31 19 7 8 20 32 33 21 9 10 34 22>;
         };
     };
 
@@ -73,10 +79,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp Q        &kp W       &kp E          &kp R            &kp T         &kp Y    &kp U        &kp I            &kp O       &kp P            &trans
-&trans  &lt 2 A      &hm LALT S  &shm LSHIFT D  &hm LGUI F       &kp G         &kp H    &hm RGUI J   &shm RSHIFT K    &hm RALT L  &kp SQT          &trans
-&trans  &hm LCTRL Z  &kp X       &kp C          &kp V            &kp B         &kp N    &kp M        &kp COMMA        &kp DOT     &hm RCTRL SLASH  &trans
-                                 &thorn         &lt 1 BACKSPACE  &kp ESCAPE    &kp RET  &lt 2 SPACE  &kp RIGHT_SHIFT
+&trans  &kp Q         &kp W        &kp E              &kp R            &kp T         &kp Y    &kp U        &kp I               &kp O        &kp P             &trans
+&trans  &lt 2 A       &htl LALT S  &htl LEFT_SHIFT D  &htl LGUI F      &kp G         &kp H    &htr RGUI J  &htr RIGHT_SHIFT K  &htr RALT L  &kp SQT           &trans
+&trans  &htl LCTRL Z  &kp X        &kp C              &kp V            &kp B         &kp N    &kp M        &kp COMMA           &kp DOT      &htr RCTRL SLASH  &trans
+                                   &thorn             &lt 1 BACKSPACE  &kp ESCAPE    &kp RET  &lt 2 SPACE  &kp RIGHT_SHIFT
             >;
 
             label = "Alphabet";
