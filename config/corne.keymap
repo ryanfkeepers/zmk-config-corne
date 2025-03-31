@@ -163,16 +163,11 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <2 3 4>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
             key-positions = <4 3>;
         };
 
         enter {
-            bindings = <&kp ENTER>;
+            bindings = <&colon_eq>;
             key-positions = <7 8>;
         };
     };
@@ -241,10 +236,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans                    &ht TILDE GRAVE       &ht LEFT_BRACKET LEFT_PARENTHESIS  &ht RIGHT_BRACKET RIGHT_PARENTHESIS  &kp EQUAL         &ht_col_eq 0 SEMICOLON  &ht GREATER_THAN RIGHT_BRACE  &ht LESS_THAN LEFT_BRACE  &ht UNDERSCORE MINUS  &trans         &trans
-&trans  &ht EXCLAMATION NUMBER_1  &ht AT_SIGN NUMBER_2  &ht HASH NUMBER_3                  &ht DOLLAR NUMBER_4                  &ht PERCENT N5    &ht CARET NUMBER_6      &ht AMPERSAND NUMBER_7        &ht ASTERISK NUMBER_8     &kp NUMBER_9          &kp NUMBER_0   &trans
-&trans  &trans                    &trans                &trans                             &trans                               &trans            &trans                  &trans                        &trans                    &trans                &kp BACKSLASH  &trans
-                                                        &trans                             &trans                               &trans            &kp RALT                &kp RSHIFT                    &kp RGUI
+&trans  &trans                    &ht TILDE GRAVE       &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht RIGHT_BRACKET LEFT_BRACKET  &kp EQUAL         &ht_col_eq 0 SEMICOLON  &ht GREATER_THAN LESS_THAN  &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans         &trans
+&trans  &ht EXCLAMATION NUMBER_1  &ht AT_SIGN NUMBER_2  &ht HASH NUMBER_3                       &ht DOLLAR NUMBER_4             &ht PERCENT N5    &ht CARET NUMBER_6      &ht AMPERSAND NUMBER_7      &ht ASTERISK NUMBER_8       &kp NUMBER_9          &kp NUMBER_0   &trans
+&trans  &trans                    &trans                &trans                                  &trans                          &trans            &trans                  &trans                      &trans                      &trans                &kp BACKSLASH  &trans
+                                                        &trans                                  &trans                          &trans            &kp RALT                &kp RSHIFT                  &kp RGUI
             >;
 
             label = "SymNum";
@@ -260,10 +255,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &kp LG(TAB)  &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)    &kp CARET       &kp LC(D)       &kp LC(U)     &kp PERCENT      &kp DOLLAR  &trans
-&trans  &trans              &trans              &trans       &trans               &trans                 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
-&trans  &trans              &kp LG(LEFT_ARROW)  &trans       &kp RG(RIGHT_ARROW)  &trans                 &kp H           &kp J           &kp K         &kp L            &none       &trans
-                                                &trans       &trans               &trans                 &trans          &trans          &trans
+&trans  &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &kp LG(LA(SPACE))  &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)    &kp CARET       &kp LC(D)       &kp LC(U)     &kp PERCENT      &kp DOLLAR  &trans
+&trans  &trans              &trans              &trans             &trans               &trans                 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
+&trans  &trans              &kp LG(LEFT_ARROW)  &kp LG(TAB)        &kp RG(RIGHT_ARROW)  &trans                 &kp H           &kp J           &kp K         &kp L            &none       &trans
+                                                &trans             &trans               &trans                 &trans          &trans          &trans
             >;
 
             label = "VimNav";
