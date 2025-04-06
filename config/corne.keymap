@@ -104,9 +104,9 @@
             hold-trigger-key-positions = <6 18 30 31 32 33 34 22 10 9 8 7 19 20 21>;
         };
 
-        ht_q_qu: ht_q_qu {
+        ht_kp_qu: ht_kp_qu {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_Q_QU";
+            label = "HT_KP_QU";
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             quick_tap_ms = <0>;
@@ -115,7 +115,7 @@
 
             quick-tap-ms = <175>;
             global-quick-tap;
-            require-prior-idle-ms = <350>;
+            require-prior-idle-ms = <200>;
             hold-trigger-on-release;
         };
     };
@@ -155,6 +155,7 @@
             #binding-cells = <0>;
             bindings = <&kp T &kp H>;
             label = "THORN";
+            wait-ms = <5>;
         };
 
         cap_thorn: cap_thorn {
@@ -162,6 +163,7 @@
             #binding-cells = <0>;
             bindings = <&kp LS(T) &kp H>;
             label = "CAP_THORN";
+            wait-ms = <5>;
         };
 
         colon_eq: coleq {
@@ -169,6 +171,7 @@
             #binding-cells = <0>;
             bindings = <&kp COLON &kp EQUAL>;
             label = "COLEQ";
+            wait-ms = <5>;
         };
 
         qu: qu {
@@ -176,6 +179,7 @@
             #binding-cells = <0>;
             bindings = <&kp Q &kp U>;
             label = "QU";
+            wait-ms = <5>;
         };
 
         wez_narrow: wez_narrow {
@@ -183,6 +187,7 @@
             #binding-cells = <0>;
             bindings = <&kp RA(RC(RG(RS(SPACE)))) &kp N9>;
             label = "WEZ_NARROW";
+            wait-ms = <5>;
         };
 
         wez_rand: wez_rand {
@@ -190,6 +195,7 @@
             #binding-cells = <0>;
             bindings = <&kp RA(RC(RG(RS(SPACE)))) &kp R>;
             label = "WEZ_RAND";
+            wait-ms = <5>;
         };
     };
 
@@ -206,10 +212,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &ht_q_qu 0 Q  &kp H        &kp L               &kp K            &kp SQT       &kp J    &kp F        &kp O                &ht_q_qu 0 U  &kp Z           &trans
-&trans  &kp S         &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T      &kp W         &kp Y    &htr RGUI C  &htrs RIGHT_SHIFT A  &htr RALT E   &kp I           &trans
-&trans  &htl LCTRL X  &kp B        &kp M               &kp D            &kp P         &kp V    &kp G        &kp COMMA            &kp DOT       &htr RCTRL SQT  &trans
-                                   &ht_thorn 0 0       &lt 1 BACKSPACE  &kp ESCAPE    &kp RET  &lt 2 SPACE  &caps_word
+&trans  &ht_kp_qu 0 Q  &kp K        &kp L               &kp H            &kp SQT       &kp C    &kp F        &kp O                &ht_kp_qu 0 U  &kp Z           &trans
+&trans  &kp S          &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T      &kp A         &kp Y    &htr RGUI C  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I           &trans
+&trans  &htl LCTRL X   &kp B        &kp M               &kp D            &kp F         &kp E    &kp G        &kp COMMA            &kp DOT        &htr RCTRL SQT  &trans
+                                    &ht_thorn 0 0       &lt 1 BACKSPACE  &kp ESCAPE    &kp RET  &lt 2 SPACE  &caps_word
             >;
 
             label = "Alphabet";
