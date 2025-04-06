@@ -212,9 +212,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &ht_kp_qu 0 Q  &kp K        &kp L               &kp H            &kp SQT       &kp C    &kp F        &kp O                &ht_kp_qu 0 U  &kp Z           &trans
-&trans  &kp S          &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T      &kp A         &kp Y    &htr RGUI C  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I           &trans
-&trans  &htl LCTRL X   &kp B        &kp M               &kp D            &kp F         &kp E    &kp G        &kp COMMA            &kp DOT        &htr RCTRL SQT  &trans
+&trans  &ht_kp_qu 0 Q  &kp K        &kp L               &kp H            &kp SQT       &kp J    &kp F        &kp O                &ht_kp_qu 0 U  &kp Z           &trans
+&trans  &kp S          &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T      &kp W         &kp Y    &htr RGUI C  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I           &trans
+&trans  &htl LCTRL X   &kp B        &kp M               &kp D            &kp P         &kp V    &kp G        &kp COMMA            &kp DOT        &htr RCTRL SQT  &trans
                                     &ht_thorn 0 0       &lt 1 BACKSPACE  &kp ESCAPE    &kp RET  &lt 2 SPACE  &caps_word
             >;
 
