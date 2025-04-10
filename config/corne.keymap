@@ -118,6 +118,21 @@
             require-prior-idle-ms = <200>;
             hold-trigger-on-release;
         };
+
+        lt_th: layer_tap_thorn {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_THORN";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&lt>, <&thorn>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+        };
     };
 
     combos {
@@ -212,10 +227,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &ht_kp_qu 0 Q  &kp K        &kp L               &kp H        &kp SQT          &kp J    &kp F        &kp O                &ht_kp_qu 0 U  &kp Z      &trans
-&trans  &kp S          &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T  &kp W            &kp Y    &htr RGUI C  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I      &trans
-&trans  &htl LCTRL X   &kp B        &kp M               &kp D        &kp P            &kp V    &kp G        &kp COMMA            &kp DOT        &sk RSHFT  &trans
-                                    &sl 3               &lt 1 E      &kp BACKSPACE    &kp RET  &lt 2 SPACE  &kp ESCAPE
+&trans  &ht_kp_qu 0 Q  &kp K        &kp L               &kp H        &kp SQT          &kp J       &kp F        &kp O                &ht_kp_qu 0 U  &kp Z      &trans
+&trans  &kp S          &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T  &kp W            &kp Y       &htr RGUI C  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I      &trans
+&trans  &htl LCTRL X   &kp B        &kp M               &kp D        &kp P            &kp V       &kp G        &kp COMMA            &kp DOT        &sk RSHFT  &trans
+                                    &sl 3               &lt_th 1 0   &kp BACKSPACE    &kp ESCAPE  &lt 2 SPACE  &kp RET
             >;
 
             label = "Alphabet";
