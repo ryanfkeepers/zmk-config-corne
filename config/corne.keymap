@@ -124,7 +124,7 @@
         compatible = "zmk,combos";
 
         SYS_LAYER {
-            bindings = <&mo 3>;
+            bindings = <&mo 4>;
             key-positions = <26 27 28 38>;
             timeout-ms = <200>;
             require-prior-idle-ms = <500>;
@@ -133,12 +133,12 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <4 3>;
+            key-positions = <3 5>;
         };
 
         coleq {
             bindings = <&colon_eq>;
-            key-positions = <7 8>;
+            key-positions = <8 6>;
         };
 
         screenshot {
@@ -212,10 +212,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &ht_kp_qu 0 Q  &kp K        &kp L               &kp H            &kp SQT       &kp J    &kp F        &kp O                &ht_kp_qu 0 U  &kp Z           &trans
-&trans  &kp S          &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T      &kp W         &kp Y    &htr RGUI C  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I           &trans
-&trans  &htl LCTRL X   &kp B        &kp M               &kp D            &kp P         &kp V    &kp G        &kp COMMA            &kp DOT        &htr RCTRL SQT  &trans
-                                    &ht_thorn 0 0       &lt 1 BACKSPACE  &kp ESCAPE    &kp RET  &lt 2 SPACE  &caps_word
+&trans  &ht_kp_qu 0 Q  &kp K        &kp L               &kp H        &kp SQT          &kp J    &kp F        &kp O                &ht_kp_qu 0 U  &kp Z      &trans
+&trans  &kp S          &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T  &kp W            &kp Y    &htr RGUI C  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I      &trans
+&trans  &htl LCTRL X   &kp B        &kp M               &kp D        &kp P            &kp V    &kp G        &kp COMMA            &kp DOT        &sk RSHFT  &trans
+                                    &sl 3               &lt 1 E      &kp BACKSPACE    &kp RET  &lt 2 SPACE  &kp ESCAPE
             >;
 
             label = "Alphabet";
@@ -231,10 +231,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans                    &ht TILDE GRAVE       &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht RIGHT_BRACKET LEFT_BRACKET  &kp EQUAL         &ht COLON SEMICOLON  &kp EQUAL               &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans              &trans
-&trans  &ht EXCLAMATION NUMBER_1  &ht AT_SIGN NUMBER_2  &ht HASH NUMBER_3                       &ht DOLLAR NUMBER_4             &ht PERCENT N5    &ht CARET NUMBER_6   &ht AMPERSAND NUMBER_7  &ht ASTERISK NUMBER_8       &kp NUMBER_9          &kp NUMBER_0        &trans
-&trans  &trans                    &trans                &trans                                  &trans                          &kp EQUAL         &ht COLON SEMICOLON  &trans                  &trans                      &trans                &ht QUESTION SLASH  &trans
-                                                        &trans                                  &trans                          &trans            &kp RALT             &kp RSHIFT              &kp RGUI
+&trans  &trans                &ht TILDE GRAVE    &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht RIGHT_BRACKET LEFT_BRACKET  &trans            &ht COLON SEMICOLON  &kp EQUAL           &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans              &trans
+&trans  &ht AT_SIGN NUMBER_2  &ht HASH NUMBER_3  &ht DOLLAR NUMBER_4                     &ht EXCLAMATION NUMBER_1        &ht PERCENT N5    &ht CARET NUMBER_6   &kp N0              &ht AMPERSAND N7            &ht ASTERISK N8       &kp N9              &trans
+&trans  &trans                &trans             &trans                                  &trans                          &trans            &trans               &ht PIPE BACKSLASH  &trans                      &trans                &ht QUESTION SLASH  &trans
+                                                 &trans                                  &trans                          &trans            &kp RALT             &kp RSHIFT          &kp RGUI
             >;
 
             label = "SymNum";
@@ -259,8 +259,17 @@
             label = "VimNav";
         };
 
+        LEADER {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans     &trans       &trans     &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &kp RG(Y)  &kp RG(C)  &kp RG(A)  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp RG(D)  &kp RG(P)    &trans     &trans     &trans     &trans  &trans  &trans
+                        &trans  &trans     &trans       &trans     &trans     &trans
+            >;
+        };
+
         SYSTEM {
-            display-name = "extra";
+            display-name = "Leader";
             bindings = <
 &trans  &bootloader  &trans  &trans  &trans  &trans            &bt BT_CLR    &trans        &bt BT_CLR_ALL  &trans        &bootloader   &trans
 &trans  &trans       &trans  &trans  &trans  &studio_unlock    &trans        &trans        &trans          &trans        &trans        &trans
