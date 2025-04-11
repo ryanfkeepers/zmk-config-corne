@@ -135,6 +135,11 @@
             bindings = <&caps_word>;
             key-positions = <5 6>;
         };
+
+        leader {
+            bindings = <&sl 3>;
+            key-positions = <30 31>;
+        };
     };
 
     //
