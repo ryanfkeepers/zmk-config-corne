@@ -186,10 +186,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none         &kp K        &kp L               &kp C        &kp SQT          &kp J       &kp F        &kp O                &ht_kp_qu 0 U  &none      &trans
-&trans  &kp S         &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T  &ht Q W          &ht Z Y     &htr RGUI H  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I      &trans
-&trans  &htl LCTRL X  &kp P        &kp M               &kp D        &kp B            &kp V       &kp G        &kp COMMA            &kp DOT        &sk RSHFT  &trans
-                                   &sl 3               &none        &kp BACKSPACE    &kp ESCAPE  &lt 2 SPACE  &kp RET
+&trans  &none         &kp K        &kp L               &kp C        &none              &none        &kp F        &kp O                &ht_kp_qu 0 U  &none      &trans
+&trans  &kp S         &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T  &ht Q W            &ht Z Y      &htr RGUI H  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I      &trans
+&trans  &htl LCTRL X  &kp P        &kp M               &kp D        &kp B              &ht J V      &kp G        &kp COMMA            &kp DOT        &sk RSHFT  &trans
+                                   &none               &kp ESCAPE   &lt 1 BACKSPACE    &lt 2 SPACE  &kp ENTER    &none
             >;
 
             label = "Alphabet";
