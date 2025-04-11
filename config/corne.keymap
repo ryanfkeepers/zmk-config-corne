@@ -42,21 +42,6 @@
             hold-trigger-key-positions = <6 18 30 31 19 7 8 20 32 33 21 9 10 34 22>;
         };
 
-        ht_thorn: hold_tap_thorn {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_THORN";
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&cap_thorn>, <&thorn>;
-
-            quick-tap-ms = <175>;
-            global-quick-tap;
-            require-prior-idle-ms = <350>;
-            hold-trigger-on-release;
-        };
-
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
@@ -118,21 +103,6 @@
             require-prior-idle-ms = <200>;
             hold-trigger-on-release;
         };
-
-        lt_th: layer_tap_thorn {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_THORN";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&lt>, <&thorn>;
-
-            quick-tap-ms = <175>;
-            global-quick-tap;
-            require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
-        };
     };
 
     combos {
@@ -148,39 +118,28 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <3 5>;
+            key-positions = <3 4>;
         };
 
         coleq {
             bindings = <&colon_eq>;
-            key-positions = <8 6>;
+            key-positions = <8 7>;
         };
 
         screenshot {
             bindings = <&kp LS(LC(LG(NUMBER_4)))>;
-            key-positions = <1 2 10 9>;
+            key-positions = <1 10>;
+        };
+
+        caps_word {
+            bindings = <&caps_word>;
+            key-positions = <5 6>;
         };
     };
 
     //
 
     macros {
-        thorn: thorn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp T &kp H>;
-            label = "THORN";
-            wait-ms = <5>;
-        };
-
-        cap_thorn: cap_thorn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp H>;
-            label = "CAP_THORN";
-            wait-ms = <5>;
-        };
-
         colon_eq: coleq {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -227,10 +186,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &ht_kp_qu 0 Q  &kp K        &kp L               &kp C        &kp SQT          &kp J       &kp F        &kp O                &ht_kp_qu 0 U  &kp Z      &trans
-&trans  &kp S          &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T  &kp W            &kp Y       &htr RGUI H  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I      &trans
-&trans  &htl LCTRL X   &kp P        &kp M               &kp D        &kp B            &kp V       &kp G        &kp COMMA            &kp DOT        &sk RSHFT  &trans
-                                    &sl 3               &lt_th 1 0   &kp BACKSPACE    &kp ESCAPE  &lt 2 SPACE  &kp RET
+&trans  &none         &kp K        &kp L               &kp C        &kp SQT          &kp J       &kp F        &kp O                &ht_kp_qu 0 U  &none      &trans
+&trans  &kp S         &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T  &ht Q W          &ht Z Y     &htr RGUI H  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I      &trans
+&trans  &htl LCTRL X  &kp P        &kp M               &kp D        &kp B            &kp V       &kp G        &kp COMMA            &kp DOT        &sk RSHFT  &trans
+                                   &sl 3               &none        &kp BACKSPACE    &kp ESCAPE  &lt 2 SPACE  &kp RET
             >;
 
             label = "Alphabet";
@@ -248,7 +207,7 @@
             bindings = <
 &trans  &trans                &ht TILDE GRAVE    &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht RIGHT_BRACKET LEFT_BRACKET  &trans            &ht COLON SEMICOLON  &kp EQUAL           &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans              &trans
 &trans  &ht AT_SIGN NUMBER_2  &ht HASH NUMBER_3  &ht DOLLAR NUMBER_4                     &ht EXCLAMATION NUMBER_1        &ht PERCENT N5    &ht CARET NUMBER_6   &kp N0              &ht AMPERSAND N7            &ht ASTERISK N8       &kp N9              &trans
-&trans  &trans                &trans             &trans                                  &trans                          &trans            &trans               &ht PIPE BACKSLASH  &trans                      &trans                &ht QUESTION SLASH  &trans
+&trans  &trans                &trans             &trans                                  &ht DOUBLE_QUOTES SQT           &trans            &trans               &ht QUESTION SLASH  &trans                      &trans                &ht PIPE BACKSLASH  &trans
                                                  &trans                                  &trans                          &trans            &kp RALT             &kp RSHIFT          &kp RGUI
             >;
 
@@ -268,7 +227,7 @@
 &trans  &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &kp LG(LS(SPACE))  &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)    &kp CARET       &kp LC(D)       &kp LC(U)     &kp PERCENT      &kp DOLLAR  &trans
 &trans  &trans              &trans              &trans             &trans               &trans                 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
 &trans  &wez_narrow         &kp LG(LEFT_ARROW)  &kp LG(TAB)        &kp RG(RIGHT_ARROW)  &wez_rand              &kp H           &kp J           &kp K         &kp L            &none       &trans
-                                                &trans             &kp SQT              &trans                 &trans          &trans          &trans
+                                                &trans             &trans               &trans                 &trans          &trans          &trans
             >;
 
             label = "VimNav";
@@ -276,9 +235,9 @@
 
         LEADER {
             bindings = <
-&trans  &trans  &trans  &trans  &trans     &trans       &trans     &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans       &kp RG(Y)  &kp RG(C)  &kp RG(A)  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &kp RG(D)  &kp RG(P)    &trans     &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans     &trans     &trans     &kp RG(U)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &kp RG(Y)  &kp RG(C)  &kp RG(A)  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &kp RG(D)  &kp RG(P)    &trans     &trans     &trans     &trans     &trans  &trans
                         &trans  &trans     &trans       &trans     &trans     &trans
             >;
         };
