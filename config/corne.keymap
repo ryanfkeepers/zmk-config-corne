@@ -191,7 +191,7 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none         &kp P        &kp L               &kp C        &none              &none        &kp F        &kp O                &ht_kp_qu 0 U  &none      &trans
+&trans  &none         &kp P        &kp L               &kp C        &kp BACKSPACE      &none        &kp F        &kp O                &ht_kp_qu 0 U  &none      &trans
 &trans  &kp S         &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T  &ht Q W            &ht Z Y      &htr RGUI H  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I      &trans
 &trans  &htl LCTRL X  &kp K        &kp G               &kp D        &kp B              &ht J V      &kp M        &kp COMMA            &kp DOT        &sk RSHFT  &trans
                                    &none               &kp ESCAPE   &lt 1 BACKSPACE    &lt 2 SPACE  &kp ENTER    &none
@@ -230,7 +230,7 @@
 
             bindings = <
 &trans  &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &kp LG(LS(SPACE))  &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)    &kp CARET       &kp LC(D)       &kp LC(U)     &kp PERCENT      &kp DOLLAR  &trans
-&trans  &trans              &trans              &trans             &trans               &trans                 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
+&trans  &trans              &kp LEFT_ALT        &kp LEFT_SHIFT     &kp LEFT_GUI         &trans                 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
 &trans  &wez_narrow         &kp LG(LEFT_ARROW)  &kp LG(TAB)        &kp RG(RIGHT_ARROW)  &wez_rand              &kp H           &kp J           &kp K         &kp L            &none       &trans
                                                 &trans             &trans               &trans                 &trans          &trans          &trans
             >;
@@ -240,10 +240,10 @@
 
         LEADER {
             bindings = <
-&trans  &trans  &trans  &trans  &trans     &trans       &trans     &trans     &trans     &kp RG(U)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans       &kp RG(Y)  &kp RG(C)  &kp RG(A)  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &kp RG(D)  &kp RG(P)    &trans     &trans     &trans     &trans     &trans  &trans
-                        &trans  &trans     &trans       &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &trans     &trans  &trans     &kp RG(U)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans       &kp RG(C)  &none   &kp RG(A)  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &kp RG(X)  &kp RG(P)    &trans     &trans  &trans     &trans     &trans  &trans
+                        &trans  &trans     &trans       &trans     &trans  &trans
             >;
         };
 
