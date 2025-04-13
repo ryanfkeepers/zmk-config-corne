@@ -208,8 +208,8 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none  &kp G        &kp L               &kp M             &kp BACKSPACE      &none        &kp F          &kp O                &ht_kp_qu 0 U  &none            &trans
-&trans  &kp S  &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T       &ht X W            &ht Z Y      &htr RGUI H    &htrs RIGHT_SHIFT A  &htr RALT E    &ht RS(I) I      &trans
+&trans  &none  &kp W        &kp L               &kp M             &kp BACKSPACE      &none        &kp F          &kp O                &ht_kp_qu 0 U  &none            &trans
+&trans  &kp S  &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T       &ht X G            &ht Z Y      &htr RGUI H    &htrs RIGHT_SHIFT A  &htr RALT E    &ht RS(I) I      &trans
 &trans  &kp Q  &kp K        &kp C               &kp D             &htl LCTRL B       &ht J V      &kp P          &kp COMMA            &kp DOT        &sk RIGHT_SHIFT  &trans
                             &none               &ht COLON ESCAPE  &lt 1 BACKSPACE    &lt 2 SPACE  &ht SQT ENTER  &none
             >;
@@ -227,7 +227,7 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans               &ht TILDE GRAVE    &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht RIGHT_BRACKET LEFT_BRACKET  &trans            &none               &ht PLUS EQUAL      &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans              &trans
+&trans  &trans               &ht TILDE GRAVE    &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht RIGHT_BRACKET LEFT_BRACKET  &trans            &trans              &ht PLUS EQUAL      &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans              &trans
 &trans  &ht DOLLAR NUMBER_4  &ht HASH NUMBER_3  &ht AT_SIGN NUMBER_2                    &ht EXCLAMATION NUMBER_1        &ht PERCENT N5    &ht CARET NUMBER_6  &kp N0              &ht AMPERSAND N7            &ht ASTERISK N8       &kp N9              &trans
 &trans  &trans               &trans             &trans                                  &ht DOUBLE_QUOTES SQT           &trans            &trans              &ht QUESTION SLASH  &ht COLON SEMICOLON         &trans                &ht PIPE BACKSLASH  &trans
                                                 &trans                                  &trans                          &trans            &kp RALT            &kp RSHIFT          &kp RGUI
