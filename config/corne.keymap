@@ -194,8 +194,8 @@
 
             bindings = <
 &trans  &none         &kp P        &kp L               &kp C        &kp BACKSPACE      &none        &kp F        &kp O                &ht_kp_qu 0 U  &none        &trans
-&trans  &kp S         &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T  &ht Q W            &ht Z Y      &htr RGUI H  &htrs RIGHT_SHIFT A  &htr RALT E    &ht RS(I) I  &trans
-&trans  &htl LCTRL X  &kp K        &kp G               &kp D        &kp B              &ht J V      &kp M        &kp COMMA            &kp DOT        &sk RSHFT    &trans
+&trans  &kp S         &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T  &ht X W            &ht Z Y      &htr RGUI H  &htrs RIGHT_SHIFT A  &htr RALT E    &ht RS(I) I  &trans
+&trans  &htl LCTRL Q  &kp K        &kp G               &kp D        &kp B              &ht J V      &kp M        &kp COMMA            &kp DOT        &sk RSHFT    &trans
                                    &none               &kp ESCAPE   &lt 1 BACKSPACE    &lt 2 SPACE  &kp ENTER    &none
             >;
 
@@ -212,10 +212,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans                &ht TILDE GRAVE    &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht RIGHT_BRACKET LEFT_BRACKET  &trans            &ht COLON SEMICOLON  &ht PLUS EQUAL      &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans              &trans
-&trans  &ht AT_SIGN NUMBER_2  &ht HASH NUMBER_3  &ht DOLLAR NUMBER_4                     &ht EXCLAMATION NUMBER_1        &ht PERCENT N5    &ht CARET NUMBER_6   &kp N0              &ht AMPERSAND N7            &ht ASTERISK N8       &kp N9              &trans
-&trans  &trans                &trans             &trans                                  &ht DOUBLE_QUOTES SQT           &trans            &trans               &ht QUESTION SLASH  &trans                      &trans                &ht PIPE BACKSLASH  &trans
-                                                 &trans                                  &trans                          &trans            &kp RALT             &kp RSHIFT          &kp RGUI
+&trans  &trans                &ht TILDE GRAVE    &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht RIGHT_BRACKET LEFT_BRACKET  &trans            &none               &ht PLUS EQUAL      &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans              &trans
+&trans  &ht AT_SIGN NUMBER_2  &ht HASH NUMBER_3  &ht DOLLAR NUMBER_4                     &ht EXCLAMATION NUMBER_1        &ht PERCENT N5    &ht CARET NUMBER_6  &kp N0              &ht AMPERSAND N7            &ht ASTERISK N8       &kp N9              &trans
+&trans  &trans                &trans             &trans                                  &ht DOUBLE_QUOTES SQT           &trans            &trans              &ht QUESTION SLASH  &ht COLON SEMICOLON         &trans                &ht PIPE BACKSLASH  &trans
+                                                 &trans                                  &trans                          &trans            &kp RALT            &kp RSHIFT          &kp RGUI
             >;
 
             label = "SymNum";
