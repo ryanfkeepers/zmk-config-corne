@@ -138,7 +138,9 @@
 
         leader {
             bindings = <&sl 3>;
-            key-positions = <30 31>;
+            key-positions = <31 32>;
+            timeout-ms = <1000>;
+            require-prior-idle-ms = <1000>;
         };
     };
 
@@ -191,9 +193,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none         &kp P        &kp L               &kp C        &kp BACKSPACE      &none        &kp F        &kp O                &ht_kp_qu 0 U  &none      &trans
-&trans  &kp S         &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T  &ht Q W            &ht Z Y      &htr RGUI H  &htrs RIGHT_SHIFT A  &htr RALT E    &kp I      &trans
-&trans  &htl LCTRL X  &kp K        &kp G               &kp D        &kp B              &ht J V      &kp M        &kp COMMA            &kp DOT        &sk RSHFT  &trans
+&trans  &none         &kp P        &kp L               &kp C        &kp BACKSPACE      &none        &kp F        &kp O                &ht_kp_qu 0 U  &none        &trans
+&trans  &kp S         &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T  &ht Q W            &ht Z Y      &htr RGUI H  &htrs RIGHT_SHIFT A  &htr RALT E    &ht RS(I) I  &trans
+&trans  &htl LCTRL X  &kp K        &kp G               &kp D        &kp B              &ht J V      &kp M        &kp COMMA            &kp DOT        &sk RSHFT    &trans
                                    &none               &kp ESCAPE   &lt 1 BACKSPACE    &lt 2 SPACE  &kp ENTER    &none
             >;
 
@@ -210,7 +212,7 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans                &ht TILDE GRAVE    &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht RIGHT_BRACKET LEFT_BRACKET  &trans            &ht COLON SEMICOLON  &kp EQUAL           &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans              &trans
+&trans  &trans                &ht TILDE GRAVE    &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht RIGHT_BRACKET LEFT_BRACKET  &trans            &ht COLON SEMICOLON  &ht PLUS EQUAL      &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans              &trans
 &trans  &ht AT_SIGN NUMBER_2  &ht HASH NUMBER_3  &ht DOLLAR NUMBER_4                     &ht EXCLAMATION NUMBER_1        &ht PERCENT N5    &ht CARET NUMBER_6   &kp N0              &ht AMPERSAND N7            &ht ASTERISK N8       &kp N9              &trans
 &trans  &trans                &trans             &trans                                  &ht DOUBLE_QUOTES SQT           &trans            &trans               &ht QUESTION SLASH  &trans                      &trans                &ht PIPE BACKSLASH  &trans
                                                  &trans                                  &trans                          &trans            &kp RALT             &kp RSHIFT          &kp RGUI
@@ -232,7 +234,7 @@
 &trans  &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &kp LG(LS(SPACE))  &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)    &kp CARET       &kp LC(D)       &kp LC(U)     &kp PERCENT      &kp DOLLAR  &trans
 &trans  &trans              &kp LEFT_ALT        &kp LEFT_SHIFT     &kp LEFT_GUI         &trans                 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
 &trans  &wez_narrow         &kp LG(LEFT_ARROW)  &kp LG(TAB)        &kp RG(RIGHT_ARROW)  &wez_rand              &kp H           &kp J           &kp K         &kp L            &none       &trans
-                                                &trans             &trans               &trans                 &trans          &trans          &trans
+                                                &trans             &kp SQT              &trans                 &trans          &trans          &trans
             >;
 
             label = "VimNav";
@@ -240,10 +242,10 @@
 
         LEADER {
             bindings = <
-&trans  &trans  &trans  &trans  &trans     &trans       &trans     &trans  &trans     &kp RG(U)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans       &kp RG(C)  &none   &kp RG(A)  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &kp RG(X)  &kp RG(P)    &trans     &trans  &trans     &trans     &trans  &trans
-                        &trans  &trans     &trans       &trans     &trans  &trans
+&none  &none  &kp RG(V)  &none  &kp LG(X)  &none    &none      &none  &none      &kp RG(U)  &none  &none
+&none  &none  &none      &none  &none      &none    &kp RG(C)  &none  &kp RG(A)  &none      &none  &none
+&none  &none  &none      &none  &kp RG(X)  &none    &kp RG(V)  &none  &none      &none      &none  &none
+                         &none  &none      &none    &none      &none  &none
             >;
         };
 
