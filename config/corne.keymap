@@ -208,9 +208,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none  &kp P        &kp L               &kp C             &kp BACKSPACE      &none        &kp F          &kp O                &ht_kp_qu 0 U  &none            &trans
+&trans  &none  &kp G        &kp L               &kp M             &kp BACKSPACE      &none        &kp F          &kp O                &ht_kp_qu 0 U  &none            &trans
 &trans  &kp S  &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T       &ht X W            &ht Z Y      &htr RGUI H    &htrs RIGHT_SHIFT A  &htr RALT E    &ht RS(I) I      &trans
-&trans  &kp Q  &kp K        &kp G               &kp D             &htl LCTRL B       &ht J V      &kp M          &kp COMMA            &kp DOT        &sk RIGHT_SHIFT  &trans
+&trans  &kp Q  &kp K        &kp C               &kp D             &htl LCTRL B       &ht J V      &kp P          &kp COMMA            &kp DOT        &sk RIGHT_SHIFT  &trans
                             &none               &ht COLON ESCAPE  &lt 1 BACKSPACE    &lt 2 SPACE  &ht SQT ENTER  &none
             >;
 
