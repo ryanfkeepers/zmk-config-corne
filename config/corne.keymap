@@ -14,14 +14,14 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_RIGHT";
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
+            tapping-term-ms = <350>;
             quick_tap_ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
             quick-tap-ms = <175>;
             global-quick-tap;
-            require-prior-idle-ms = <350>;
+            require-prior-idle-ms = <1000>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <1 13 25 26 14 2 3 15 27 28 16 4 5 17 29>;
         };
@@ -30,14 +30,14 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_LEFT";
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
+            tapping-term-ms = <350>;
             quick_tap_ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
             quick-tap-ms = <175>;
             global-quick-tap;
-            require-prior-idle-ms = <350>;
+            require-prior-idle-ms = <1000>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 18 30 31 19 7 8 20 32 33 21 9 10 34 22>;
         };
@@ -61,14 +61,14 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_RIGHT_SHORT";
             #binding-cells = <2>;
-            tapping-term-ms = <135>;
+            tapping-term-ms = <500>;
             quick_tap_ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
             quick-tap-ms = <135>;
             global-quick-tap;
-            require-prior-idle-ms = <350>;
+            require-prior-idle-ms = <1000>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <1 13 25 26 14 2 3 15 27 28 16 4 5 17 29>;
         };
@@ -77,14 +77,14 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_LEFT_SHORT";
             #binding-cells = <2>;
-            tapping-term-ms = <115>;
+            tapping-term-ms = <350>;
             quick_tap_ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
             quick-tap-ms = <115>;
             global-quick-tap;
-            require-prior-idle-ms = <350>;
+            require-prior-idle-ms = <1000>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 18 30 31 32 33 34 22 10 9 8 7 19 20 21>;
         };
@@ -118,6 +118,36 @@
             require-prior-idle-ms = <200>;
             hold-trigger-on-release;
         };
+
+        hsk_t: hold_sticky_key_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_STICKY_KEY_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&sk>, <&kp>;
+
+            quick-tap-ms = <200>;
+            global-quick-tap;
+            require-prior-idle-ms = <200>;
+            hold-trigger-on-release;
+        };
+
+        h_skt: hold_stickykeytap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_STICKYKEYTAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&sk>;
+
+            quick-tap-ms = <200>;
+            global-quick-tap;
+            require-prior-idle-ms = <200>;
+            hold-trigger-on-release;
+        };
     };
 
     combos {
@@ -134,21 +164,27 @@
         tab {
             bindings = <&kp TAB>;
             key-positions = <3 4>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <500>;
         };
 
         coleq {
             bindings = <&colon_eq>;
             key-positions = <8 7>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <1000>;
         };
 
         screenshot {
             bindings = <&kp LS(LC(LG(NUMBER_4)))>;
             key-positions = <1 10>;
+            require-prior-idle-ms = <1000>;
         };
 
         caps_word {
             bindings = <&caps_word>;
-            key-positions = <5 6>;
+            key-positions = <29 30>;
+            require-prior-idle-ms = <1000>;
         };
 
         leader {
@@ -208,10 +244,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none  &kp W        &kp L               &kp M             &kp BACKSPACE      &none        &kp F          &kp O                &ht_kp_qu 0 U  &none            &trans
-&trans  &kp S  &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T       &ht X G            &ht Z Y      &htr RGUI H    &htrs RIGHT_SHIFT A  &htr RALT E    &ht RS(I) I      &trans
-&trans  &kp Q  &kp K        &kp C               &kp D             &htl LCTRL B       &ht J V      &kp P          &kp COMMA            &kp DOT        &sk RIGHT_SHIFT  &trans
-                            &none               &ht COLON ESCAPE  &lt 1 BACKSPACE    &lt 2 SPACE  &ht SQT ENTER  &none
+&trans  &none  &kp W        &kp L               &kp P             &kp BACKSPACE      &none        &kp F            &kp O                   &ht_kp_qu 0 U          &none                   &trans
+&trans  &kp S  &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T       &ht X G            &ht Z Y      &htr RGUI H      &htrs RIGHT_SHIFT A     &htr RALT E            &ht RS(I) I             &trans
+&trans  &kp Q  &kp K        &kp C               &kp D             &htl LCTRL B       &ht J V      &kp M            &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &h_skt SQT RIGHT_SHIFT  &trans
+                            &none               &ht COLON ESCAPE  &lt 1 BACKSPACE    &lt 2 SPACE  &ht SLASH ENTER  &none
             >;
 
             label = "Alphabet";
@@ -227,10 +263,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans               &ht TILDE GRAVE    &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht RIGHT_BRACKET LEFT_BRACKET  &trans            &trans              &ht PLUS EQUAL      &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans              &trans
-&trans  &ht DOLLAR NUMBER_4  &ht HASH NUMBER_3  &ht AT_SIGN NUMBER_2                    &ht EXCLAMATION NUMBER_1        &ht PERCENT N5    &ht CARET NUMBER_6  &kp N0              &ht AMPERSAND N7            &ht ASTERISK N8       &kp N9              &trans
-&trans  &trans               &trans             &trans                                  &ht DOUBLE_QUOTES SQT           &trans            &trans              &ht QUESTION SLASH  &ht COLON SEMICOLON         &trans                &ht PIPE BACKSLASH  &trans
-                                                &trans                                  &trans                          &trans            &kp RALT            &kp RSHIFT          &kp RGUI
+&trans  &trans               &ht TILDE GRAVE    &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht COLON SEMICOLON       &trans            &trans              &ht PLUS EQUAL      &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans              &trans
+&trans  &ht DOLLAR NUMBER_4  &ht HASH NUMBER_3  &ht AT_SIGN NUMBER_2                    &ht EXCLAMATION NUMBER_1  &ht PERCENT N5    &ht CARET NUMBER_6  &kp N0              &ht AMPERSAND N7            &ht ASTERISK N8       &kp N9              &trans
+&trans  &trans               &trans             &trans                                  &ht DOUBLE_QUOTES SQT     &trans            &trans              &ht QUESTION SLASH  &trans                      &trans                &ht PIPE BACKSLASH  &trans
+                                                &trans                                  &trans                    &trans            &kp RALT            &kp RSHIFT          &kp RGUI
             >;
 
             label = "SymNum";
@@ -248,8 +284,8 @@
             bindings = <
 &trans  &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &kp LG(LS(SPACE))  &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)    &kp CARET       &kp LC(D)       &kp LC(U)     &kp PERCENT      &kp DOLLAR  &trans
 &trans  &trans              &kp LEFT_ALT        &kp LEFT_SHIFT     &kp LEFT_GUI         &trans                 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
-&trans  &wez_narrow         &kp LG(LEFT_ARROW)  &kp LG(TAB)        &kp RG(RIGHT_ARROW)  &wez_rand              &kp H           &kp J           &kp K         &kp L            &none       &trans
-                                                &trans             &kp SQT              &trans                 &trans          &trans          &trans
+&trans  &trans              &kp LG(LEFT_ARROW)  &kp LG(TAB)        &kp RG(RIGHT_ARROW)  &trans                 &kp H           &kp J           &kp K         &kp L            &none       &trans
+                                                &trans             &trans               &key_repeat            &trans          &trans          &trans
             >;
 
             label = "VimNav";
@@ -257,10 +293,10 @@
 
         LEADER {
             bindings = <
-&none  &none  &kp RG(V)  &none  &kp LG(X)  &none    &none      &none  &none      &kp RG(U)  &none  &none
-&none  &none  &none      &none  &none      &none    &kp RG(C)  &none  &kp RG(A)  &none      &none  &none
-&none  &none  &none      &none  &kp RG(X)  &none    &kp RG(V)  &none  &none      &none      &none  &none
-                         &none  &none      &none    &none      &none  &none
+&none  &none  &kp LG(S)    &none      &none      &none    &none      &none      &none      &kp RG(U)  &none  &none
+&none  &none  &wez_narrow  &wez_rand  &none      &none    &kp RG(C)  &none      &kp RG(A)  &none      &none  &none
+&none  &none  &none        &kp RG(X)  &kp RG(X)  &none    &kp RG(V)  &kp RG(V)  &none      &none      &none  &none
+                           &none      &none      &none    &none      &none      &none
             >;
         };
 
