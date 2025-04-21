@@ -244,10 +244,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none  &kp B        &kp L               &kp P            &none               &none            &kp F        &kp O                   &ht_kp_qu 0 U          &none          &trans
-&trans  &kp S  &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T      &ht X G             &ht Z Y          &htr RGUI H  &htrs RIGHT_SHIFT A     &htr RALT E            &kp I          &trans
-&trans  &kp Q  &kp W        &kp C               &kp D            &htl LCTRL K        &ht J V          &kp M        &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &ht SLASH SQT  &trans
-                            &none               &lt 1 BACKSPACE  &ht COLON ESCAPE    &sk RIGHT_SHIFT  &lt 2 SPACE  &none
+&trans  &none  &kp B        &kp L               &kp P            &none               &none            &ht_kp_qu 0 U  &kp O                   &kp F                  &none                &trans
+&trans  &kp S  &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T      &ht X G             &ht Z Y          &htr RGUI H    &htrs RIGHT_SHIFT A     &htr RALT E            &ht SQT I            &trans
+&trans  &kp Q  &kp W        &kp C               &kp D            &htl LCTRL K        &ht J V          &kp M          &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &ht BACKSLASH SLASH  &trans
+                            &none               &lt 1 BACKSPACE  &ht COLON ESCAPE    &sk RIGHT_SHIFT  &lt 2 SPACE    &none
             >;
 
             label = "Alphabet";
@@ -263,9 +263,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans               &ht TILDE GRAVE    &ht COLON SEMICOLON   &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &trans            &trans              &ht PLUS EQUAL  &ht QUESTION SLASH  &ht UNDERSCORE MINUS  &trans              &trans
-&trans  &ht DOLLAR NUMBER_4  &ht HASH NUMBER_3  &ht AT_SIGN NUMBER_2  &ht EXCLAMATION NUMBER_1                &ht PERCENT N5    &ht CARET NUMBER_6  &kp N0          &ht AMPERSAND N7    &ht ASTERISK N8       &kp N9              &trans
-&trans  &trans               &trans             &trans                &ht DOUBLE_QUOTES SQT                   &trans            &trans              &trans          &trans              &trans                &ht PIPE BACKSLASH  &trans
+&trans  &trans               &ht TILDE GRAVE    &ht COLON SEMICOLON   &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &trans            &trans              &ht PLUS EQUAL  &ht QUESTION SLASH  &ht UNDERSCORE MINUS  &trans  &trans
+&trans  &ht DOLLAR NUMBER_4  &ht HASH NUMBER_3  &ht AT_SIGN NUMBER_2  &ht EXCLAMATION NUMBER_1                &ht PERCENT N5    &ht CARET NUMBER_6  &kp N0          &ht AMPERSAND N7    &ht ASTERISK N8       &kp N9  &trans
+&trans  &trans               &trans             &trans                &trans                                  &trans            &kp RIGHT_GUI       &trans          &trans              &trans                &trans  &trans
                                                 &trans                &trans                                  &trans            &kp RIGHT_SHIFT     &kp RIGHT_ALT   &trans
             >;
 
