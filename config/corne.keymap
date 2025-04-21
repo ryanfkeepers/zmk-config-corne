@@ -263,10 +263,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans               &ht TILDE GRAVE    &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &ht COLON SEMICOLON       &trans            &trans              &ht PLUS EQUAL      &ht RIGHT_BRACE LEFT_BRACE  &ht UNDERSCORE MINUS  &trans              &trans
-&trans  &ht DOLLAR NUMBER_4  &ht HASH NUMBER_3  &ht AT_SIGN NUMBER_2                    &ht EXCLAMATION NUMBER_1  &ht PERCENT N5    &ht CARET NUMBER_6  &kp N0              &ht AMPERSAND N7            &ht ASTERISK N8       &kp N9              &trans
-&trans  &trans               &trans             &trans                                  &ht DOUBLE_QUOTES SQT     &trans            &trans              &ht QUESTION SLASH  &trans                      &trans                &ht PIPE BACKSLASH  &trans
-                                                &trans                                  &trans                    &trans            &kp RALT            &kp RSHIFT          &kp RGUI
+&trans  &trans               &ht TILDE GRAVE    &ht COLON SEMICOLON   &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &trans            &trans              &ht PLUS EQUAL  &ht QUESTION SLASH  &ht UNDERSCORE MINUS  &trans              &trans
+&trans  &ht DOLLAR NUMBER_4  &ht HASH NUMBER_3  &ht AT_SIGN NUMBER_2  &ht EXCLAMATION NUMBER_1                &ht PERCENT N5    &ht CARET NUMBER_6  &kp N0          &ht AMPERSAND N7    &ht ASTERISK N8       &kp N9              &trans
+&trans  &trans               &trans             &trans                &ht DOUBLE_QUOTES SQT                   &trans            &trans              &trans          &trans              &trans                &ht PIPE BACKSLASH  &trans
+                                                &trans                &trans                                  &trans            &kp RIGHT_SHIFT     &kp RIGHT_ALT   &trans
             >;
 
             label = "SymNum";
@@ -282,10 +282,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LC(LEFT_ARROW)  &kp LG(LEFT_BRACE)  &kp LG(LS(SPACE))  &kp RG(RIGHT_BRACE)  &kp RC(RIGHT_ARROW)    &kp CARET       &kp LC(D)       &kp LC(U)     &kp PERCENT      &kp DOLLAR  &trans
-&trans  &trans              &kp LEFT_ALT        &kp LEFT_SHIFT     &kp LEFT_GUI         &trans                 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &trans
-&trans  &trans              &kp LG(LEFT_ARROW)  &kp LG(TAB)        &kp RG(RIGHT_ARROW)  &trans                 &kp H           &kp J           &kp K         &kp L            &none       &trans
-                                                &trans             &trans               &key_repeat            &trans          &trans          &trans
+&trans  &trans              &kp LG(LEFT_BRACE)  &kp LG(LS(SPACE))  &kp RG(RIGHT_BRACE)  &trans           &trans          &kp LC(D)       &kp LC(U)     &kp PERCENT      &trans      &trans
+&trans  &kp LC(LEFT_ARROW)  &kp LEFT_ALT        &kp LEFT_SHIFT     &kp LEFT_GUI         &kp RC(RIGHT)    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp DOLLAR  &trans
+&trans  &trans              &kp LG(LEFT_ARROW)  &kp LG(TAB)        &kp RG(RIGHT_ARROW)  &trans           &kp H           &kp J           &kp K         &kp L            &kp LCTRL   &trans
+                                                &trans             &trans               &key_repeat      &trans          &trans          &trans
             >;
 
             label = "VimNav";
@@ -293,10 +293,10 @@
 
         LEADER {
             bindings = <
-&none  &none  &kp LG(S)    &none      &none      &none    &none      &none      &none      &kp RG(U)  &none  &none
-&none  &none  &wez_narrow  &wez_rand  &none      &none    &kp RG(C)  &none      &kp RG(A)  &none      &none  &none
-&none  &none  &none        &kp RG(X)  &kp RG(X)  &none    &kp RG(V)  &kp RG(V)  &none      &none      &none  &none
-                           &none      &none      &none    &none      &none      &none
+&none  &none  &none        &none      &kp RG(V)  &none    &none      &none  &none      &kp RG(U)  &none  &none
+&none  &none  &wez_narrow  &wez_rand  &none      &none    &kp RG(C)  &none  &kp RG(A)  &none      &none  &none
+&none  &none  &kp RG(S)    &kp RG(X)  &kp RG(X)  &none    &kp RG(V)  &none  &none      &none      &none  &none
+                           &none      &none      &none    &none      &none  &none
             >;
         };
 
