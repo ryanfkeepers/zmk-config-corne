@@ -244,9 +244,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none  &kp B        &kp L               &kp P            &none               &none            &ht_kp_qu 0 U  &kp O                   &kp F                  &none                &trans
+&trans  &none  &kp B        &kp L               &kp D            &none               &none            &ht_kp_qu 0 U  &kp O                   &kp F                  &none                &trans
 &trans  &kp S  &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T      &ht X G             &ht Z Y          &htr RGUI H    &htrs RIGHT_SHIFT A     &htr RALT E            &ht SQT I            &trans
-&trans  &kp Q  &kp W        &kp C               &kp D            &htl LCTRL K        &ht J V          &kp M          &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &ht BACKSLASH SLASH  &trans
+&trans  &kp Q  &kp W        &kp C               &kp P            &htl LCTRL K        &ht J V          &kp M          &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &ht BACKSLASH SLASH  &trans
                             &none               &lt 1 BACKSPACE  &ht COLON ESCAPE    &sk RIGHT_SHIFT  &lt 2 SPACE    &none
             >;
 
