@@ -89,18 +89,18 @@
             hold-trigger-key-positions = <6 18 30 31 32 33 34 22 10 9 8 7 19 20 21>;
         };
 
-        ht_kp_qu: ht_kp_qu {
+        ht_qu: ht_qu {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_KP_QU";
+            label = "HT_QU";
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&qu>, <&kp>;
+            bindings = <&q_u>, <&kp>;
 
             quick-tap-ms = <175>;
             global-quick-tap;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <0>;
             hold-trigger-on-release;
         };
 
@@ -146,6 +146,36 @@
             quick-tap-ms = <200>;
             global-quick-tap;
             require-prior-idle-ms = <200>;
+            hold-trigger-on-release;
+        };
+
+        ht_ck: ht_ck {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_CK";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&c_k>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_npi: holdtap_noprioridle {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_NPI";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
             hold-trigger-on-release;
         };
     };
@@ -206,11 +236,11 @@
             wait-ms = <5>;
         };
 
-        qu: qu {
+        q_u: q_u {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp Q &kp U>;
-            label = "QU";
+            label = "Q_U";
             wait-ms = <5>;
         };
 
@@ -229,6 +259,13 @@
             label = "WEZ_RAND";
             wait-ms = <5>;
         };
+
+        c_k: c_k {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp K>;
+            label = "C_K";
+        };
     };
 
     keymap {
@@ -244,10 +281,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none  &kp B        &kp L               &kp D            &none               &none            &ht_kp_qu 0 U  &kp O                   &kp F                  &none                &trans
-&trans  &kp S  &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T      &ht X G             &ht Z Y          &htr RGUI H    &htrs RIGHT_SHIFT A     &htr RALT E            &ht SQT I            &trans
-&trans  &kp Q  &kp W        &kp C               &kp P            &htl LCTRL K        &ht J V          &kp M          &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &ht BACKSLASH SLASH  &trans
-                            &none               &lt 1 BACKSPACE  &ht COLON ESCAPE    &sk RIGHT_SHIFT  &lt 2 SPACE    &none
+&trans  &none         &kp B        &kp L               &ht_npi J F      &none               &none            &kp D        &kp O                   &ht_qu 0 U             &none                &trans
+&trans  &kp S         &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T      &ht X G             &ht_npi Z Y      &htr RGUI H  &htrs RIGHT_SHIFT A     &htr RALT E            &ht SQT I            &trans
+&trans  &htl LCTRL K  &kp W        &ht_ck 0 C          &ht_npi K P      &none               &none            &ht_npi V M  &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &ht BACKSLASH SLASH  &trans
+                                   &none               &lt 1 BACKSPACE  &ht COLON ESCAPE    &sk RIGHT_SHIFT  &lt 2 SPACE  &none
             >;
 
             label = "Alphabet";
@@ -293,10 +330,10 @@
 
         LEADER {
             bindings = <
-&none  &none  &none        &none      &kp RG(V)  &none    &none      &none  &none      &kp RG(U)  &none  &none
-&none  &none  &wez_narrow  &wez_rand  &none      &none    &kp RG(C)  &none  &kp RG(A)  &none      &none  &none
-&none  &none  &kp RG(S)    &kp RG(X)  &kp RG(X)  &none    &kp RG(V)  &none  &none      &none      &none  &none
-                           &none      &none      &none    &none      &none  &none
+&none  &none      &none        &none      &none      &none    &none      &kp RG(X)  &none      &kp RG(U)  &none  &none
+&none  &kp LG(S)  &wez_narrow  &wez_rand  &none      &none    &kp RG(C)  &none      &kp RG(A)  &none      &none  &none
+&none  &none      &kp RG(S)    &kp RG(X)  &kp RG(P)  &none    &kp RG(V)  &none      &none      &none      &none  &none
+                               &none      &none      &none    &none      &none      &none
             >;
         };
 
