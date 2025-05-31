@@ -281,10 +281,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none        &kp B        &kp L               &kp D            &none               &none            &ht_qu 0 U   &kp O                   &ht_npi J F            &none                &trans
-&trans  &kp S        &htl LALT N  &htls LEFT_SHIFT R  &htl LGUI T      &ht X G             &ht_npi Z Y      &htr RGUI H  &htrs RIGHT_SHIFT A     &htr RALT E            &ht SQT I            &trans
-&trans  &key_repeat  &ht_npi V W  &ht_npi K C         &htl LCTRL Q     &none               &none            &ht_npi P M  &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &ht BACKSLASH SLASH  &trans
-                                  &none               &lt 1 BACKSPACE  &ht COLON ESCAPE    &sk RIGHT_SHIFT  &lt 2 SPACE  &none
+&trans  &none        &kp C        &ht_npi K L    &kp D                      &kp P          &kp BSPC         &kp I                    &kp O                   &ht_qu 0 U             &none         &trans
+&trans  &ht_npi Z M  &htl LALT S  &htl LSHIFT R  &htl LGUI T                &key_repeat    &ht_npi X Y      &htr RGUI E              &htrs RIGHT_SHIFT A     &htr RALT H            &kp W         &trans
+&trans  &htl TAB G   &ht_npi J B  &ht_npi V F    &ht_npi DOUBLE_QUOTES SQT  &none          &none            &ht_npi BACKSLASH SLASH  &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &htr RCTRL Q  &trans
+                                  &none          &lt 1 N                    &sl 3          &sk RIGHT_SHIFT  &lt 2 SPACE              &none
             >;
 
             label = "Alphabet";
@@ -300,9 +300,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans               &ht TILDE GRAVE    &ht COLON SEMICOLON   &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &trans            &trans              &ht PLUS EQUAL  &trans            &ht UNDERSCORE MINUS  &trans  &trans
+&trans  &trans               &ht TILDE GRAVE    &ht COLON SEMICOLON   &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &trans            &kp RGUI            &ht PLUS EQUAL  &trans            &ht UNDERSCORE MINUS  &trans  &trans
 &trans  &ht DOLLAR NUMBER_4  &ht HASH NUMBER_3  &ht AT_SIGN NUMBER_2  &ht EXCLAMATION NUMBER_1                &ht PERCENT N5    &ht CARET NUMBER_6  &kp N0          &ht AMPERSAND N7  &ht ASTERISK N8       &kp N9  &trans
-&trans  &trans               &trans             &trans                &trans                                  &trans            &kp RIGHT_GUI       &trans          &trans            &trans                &trans  &trans
+&trans  &trans               &trans             &trans                &trans                                  &trans            &none               &trans          &trans            &trans                &trans  &trans
                                                 &trans                &trans                                  &trans            &kp RIGHT_SHIFT     &kp RIGHT_ALT   &trans
             >;
 
@@ -330,10 +330,10 @@
 
         LEADER {
             bindings = <
-&none  &none      &none        &none      &kp LG(X)  &none    &none      &kp RG(U)  &none      &none  &none  &none
-&none  &kp LG(S)  &wez_narrow  &wez_rand  &none      &none    &kp RG(C)  &none      &kp RG(A)  &none  &none  &none
-&none  &none      &kp RG(P)    &kp RG(X)  &none      &none    &none      &none      &none      &none  &none  &none
-                               &none      &none      &none    &none      &none      &none
+&none  &none  &kp LG(X)  &none        &kp LG(DEL)  &none    &none      &none  &none      &kp RG(Z)  &none  &none
+&none  &none  &kp LG(S)  &wez_narrow  &wez_rand    &none    &kp RG(C)  &none  &kp RG(A)  &none      &none  &none
+&none  &none  &kp LG(V)  &none        &none        &none    &none      &none  &none      &none      &none  &none
+                         &none        &none        &none    &none      &none  &none
             >;
         };
 
