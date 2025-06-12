@@ -26,22 +26,6 @@
             hold-trigger-key-positions = <1 13 25 26 14 2 3 15 27 28 16 4 5 17 29>;
         };
 
-        htl: hold_tap_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_LEFT";
-            #binding-cells = <2>;
-            tapping-term-ms = <350>;
-            quick_tap_ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-
-            quick-tap-ms = <175>;
-            global-quick-tap;
-            require-prior-idle-ms = <1000>;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <6 18 30 31 19 7 8 20 32 33 21 9 10 34 22>;
-        };
-
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
@@ -73,22 +57,6 @@
             hold-trigger-key-positions = <1 13 25 26 14 2 3 15 27 28 16 4 5 17 29>;
         };
 
-        htls: hold_tap_left_short {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_LEFT_SHORT";
-            #binding-cells = <2>;
-            tapping-term-ms = <350>;
-            quick_tap_ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-
-            quick-tap-ms = <115>;
-            global-quick-tap;
-            require-prior-idle-ms = <1000>;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <6 18 30 31 32 33 34 22 10 9 8 7 19 20 21>;
-        };
-
         ht_qu: ht_qu {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_QU";
@@ -101,51 +69,6 @@
             quick-tap-ms = <175>;
             global-quick-tap;
             require-prior-idle-ms = <0>;
-            hold-trigger-on-release;
-        };
-
-        hsl_t: hold_sticky_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_STICKY_LAYER_TAP";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&sl>, <&kp>;
-
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            require-prior-idle-ms = <200>;
-            hold-trigger-on-release;
-        };
-
-        hsk_t: hold_sticky_key_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_STICKY_KEY_TAP";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&sk>, <&kp>;
-
-            quick-tap-ms = <200>;
-            global-quick-tap;
-            require-prior-idle-ms = <200>;
-            hold-trigger-on-release;
-        };
-
-        h_skt: hold_stickykeytap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_STICKYKEYTAP";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&sk>;
-
-            quick-tap-ms = <200>;
-            global-quick-tap;
-            require-prior-idle-ms = <200>;
             hold-trigger-on-release;
         };
 
@@ -172,6 +95,21 @@
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_ing: ht_ing {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_ING";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&i_n_g>, <&kp>;
 
             quick-tap-ms = <175>;
             global-quick-tap;
@@ -266,6 +204,20 @@
             bindings = <&kp C &kp K>;
             label = "C_K";
         };
+
+        j_j: j_j {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp J &kp J>;
+            label = "J_J";
+        };
+
+        i_n_g: i_n_g {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp N &kp G>;
+            label = "I_N_G";
+        };
     };
 
     keymap {
@@ -281,10 +233,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none        &kp C        &ht_npi K L    &kp D                      &kp P          &kp BSPC         &kp I                    &kp O                   &ht_qu 0 U             &none         &trans
-&trans  &ht_npi Z M  &htl LALT S  &htl LSHIFT R  &htl LGUI T                &key_repeat    &ht_npi X Y      &htr RGUI E              &htrs RIGHT_SHIFT A     &htr RALT H            &kp W         &trans
-&trans  &htl TAB G   &ht_npi J B  &ht_npi V F    &ht_npi DOUBLE_QUOTES SQT  &none          &none            &ht_npi BACKSLASH SLASH  &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &htr RCTRL Q  &trans
-                                  &none          &lt 1 N                    &sl 3          &sk RIGHT_SHIFT  &lt 2 SPACE              &none
+&trans  &none  &ht_ck 0 C     &ht_npi K L  &kp D                      &key_repeat    &kp BSPC         &ht_ing 0 I              &kp O                   &ht_qu 0 U             &none         &trans
+&trans  &kp M  &ht_npi J S    &ht_npi V R  &ht_npi B T                &none          &kp Y            &htr RGUI E              &htrs RIGHT_SHIFT A     &htr RALT H            &kp P         &trans
+&trans  &kp W  &ht_npi TAB Q  &sl 3        &ht_npi DOUBLE_QUOTES SQT  &none          &none            &ht_npi BACKSLASH SLASH  &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &htr RCTRL G  &trans
+                              &none        &lt 1 N                    &kp F          &sk RIGHT_SHIFT  &lt 2 SPACE              &none
             >;
 
             label = "Alphabet";
@@ -300,7 +252,7 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans               &ht TILDE GRAVE    &ht COLON SEMICOLON   &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &trans            &kp RGUI            &ht PLUS EQUAL  &trans            &ht UNDERSCORE MINUS  &trans  &trans
+&trans  &trans               &ht TILDE GRAVE    &ht COLON SEMICOLON   &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &trans            &sk RGUI            &ht PLUS EQUAL  &ht_npi Z X       &ht UNDERSCORE MINUS  &trans  &trans
 &trans  &ht DOLLAR NUMBER_4  &ht HASH NUMBER_3  &ht AT_SIGN NUMBER_2  &ht EXCLAMATION NUMBER_1                &ht PERCENT N5    &ht CARET NUMBER_6  &kp N0          &ht AMPERSAND N7  &ht ASTERISK N8       &kp N9  &trans
 &trans  &trans               &trans             &trans                &trans                                  &trans            &none               &trans          &trans            &trans                &trans  &trans
                                                 &trans                &trans                                  &trans            &kp RIGHT_SHIFT     &kp RIGHT_ALT   &trans
@@ -320,7 +272,7 @@
 
             bindings = <
 &trans  &trans              &kp LG(LEFT_BRACE)  &kp LG(LS(SPACE))  &kp RG(RIGHT_BRACE)  &trans           &trans          &kp LC(D)       &kp LC(U)     &kp PERCENT      &trans      &trans
-&trans  &kp LC(LEFT_ARROW)  &kp LEFT_ALT        &kp LEFT_SHIFT     &kp LEFT_GUI         &kp RC(RIGHT)    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp DOLLAR  &trans
+&trans  &kp LC(LEFT_ARROW)  &sk LEFT_ALT        &sk LEFT_SHIFT     &sk LEFT_GUI         &kp RC(RIGHT)    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp DOLLAR  &trans
 &trans  &trans              &kp LG(LEFT_ARROW)  &kp LG(TAB)        &kp RG(RIGHT_ARROW)  &trans           &kp H           &kp J           &kp K         &kp L            &kp LCTRL   &trans
                                                 &trans             &trans               &key_repeat      &trans          &trans          &trans
             >;
@@ -330,10 +282,10 @@
 
         LEADER {
             bindings = <
-&none  &none  &kp LG(X)  &none        &kp LG(DEL)  &none    &none      &none  &none      &kp RG(Z)  &none  &none
-&none  &none  &kp LG(S)  &wez_narrow  &wez_rand    &none    &kp RG(C)  &none  &kp RG(A)  &none      &none  &none
-&none  &none  &kp LG(V)  &none        &none        &none    &none      &none  &none      &none      &none  &none
-                         &none        &none        &none    &none      &none  &none
+&none  &none  &kp LG(X)  &none        &kp DELETE  &none    &none      &none  &none      &kp RG(Z)  &none      &none
+&none  &none  &kp LG(S)  &wez_narrow  &wez_rand   &none    &kp RG(C)  &none  &kp RG(A)  &none      &kp RG(V)  &none
+&none  &none  &kp LG(V)  &none        &none       &none    &none      &none  &none      &none      &j_j       &none
+                         &none        &none       &none    &none      &none  &none
             >;
         };
 
