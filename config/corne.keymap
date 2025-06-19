@@ -122,7 +122,7 @@
         compatible = "zmk,combos";
 
         SYS_LAYER {
-            bindings = <&mo 4>;
+            bindings = <&mo 5>;
             key-positions = <26 27 28 38>;
             timeout-ms = <200>;
             require-prior-idle-ms = <500>;
@@ -218,6 +218,42 @@
             bindings = <&kp I &kp N &kp G>;
             label = "I_N_G";
         };
+
+        w_h: w_h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp W &kp H>;
+            label = "W_H";
+            wait-ms = <15>;
+            tap-ms = <15>;
+        };
+
+        w_j: w_j {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp W &kp J>;
+            label = "W_J";
+            wait-ms = <15>;
+            tap-ms = <15>;
+        };
+
+        w_k: w_k {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp W &kp K>;
+            label = "W_K";
+            wait-ms = <15>;
+            tap-ms = <15>;
+        };
+
+        w_l: w_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp W &kp L>;
+            label = "W_L";
+            wait-ms = <15>;
+            tap-ms = <15>;
+        };
     };
 
     keymap {
@@ -233,10 +269,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none  &ht_ck 0 C     &ht_npi K L  &kp D                      &key_repeat    &kp BSPC         &ht_ing 0 I              &kp O                   &ht_qu 0 U             &none         &trans
-&trans  &kp M  &ht_npi J S    &ht_npi V R  &ht_npi B T                &none          &kp Y            &htr RGUI E              &htrs RIGHT_SHIFT A     &htr RALT H            &kp P         &trans
-&trans  &kp W  &ht_npi TAB Q  &sl 3        &ht_npi DOUBLE_QUOTES SQT  &none          &none            &ht_npi BACKSLASH SLASH  &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &htr RCTRL G  &trans
-                              &none        &lt 1 N                    &kp F          &sk RIGHT_SHIFT  &lt 2 SPACE              &none
+&trans  &none        &ht_ck 0 C     &ht_npi K L  &kp D                      &key_repeat    &kp BSPC         &ht_ing 0 I              &kp O                   &ht_qu 0 U             &none         &trans
+&trans  &ht_npi J M  &ht_npi B S    &ht_npi V R  &ht_npi W T                &key_repeat    &kp Y            &htr RGUI E              &htrs RIGHT_SHIFT A     &htr RALT H            &kp P         &trans
+&trans  &kp W        &ht_npi TAB Q  &sl 3        &ht_npi DOUBLE_QUOTES SQT  &none          &none            &ht_npi BACKSLASH SLASH  &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &htr RCTRL G  &trans
+                                    &none        &lt 1 N                    &sl 4          &sk RIGHT_SHIFT  &lt 2 SPACE              &none
             >;
 
             label = "Alphabet";
@@ -282,11 +318,24 @@
 
         LEADER {
             bindings = <
-&none  &none  &kp LG(X)  &none        &kp DELETE  &none    &none      &none  &none      &kp RG(Z)  &none      &none
-&none  &none  &kp LG(S)  &wez_narrow  &wez_rand   &none    &kp RG(C)  &none  &kp RG(A)  &none      &kp RG(V)  &none
-&none  &none  &kp LG(V)  &none        &none       &none    &none      &none  &none      &none      &j_j       &none
-                         &none        &none       &none    &none      &none  &none
+&none  &none  &kp LG(X)  &none  &kp DELETE  &none    &none      &none  &none      &kp RG(Z)  &none      &none
+&none  &none  &kp LG(S)  &none  &none       &none    &kp RG(C)  &none  &kp RG(A)  &none      &kp RG(V)  &none
+&none  &none  &none      &none  &none       &none    &none      &none  &none      &none      &j_j       &none
+                         &none  &none       &none    &none      &none  &none
             >;
+
+            label = "LEAD";
+        };
+
+        Window {
+            bindings = <
+&none  &none  &none  &none      &none        &none    &none          &none          &none          &none          &none  &none
+&none  &none  &none  &wez_rand  &none        &none    &none          &none          &none          &none          &none  &none
+&none  &j_j   &none  &none      &none        &none    &kp RS(RA(H))  &kp RS(RA(J))  &kp RS(RA(K))  &kp RS(RA(L))  &none  &none
+                     &none      &wez_narrow  &none    &none          &none          &none
+            >;
+
+            label = "WIN";
         };
 
         SYSTEM {
