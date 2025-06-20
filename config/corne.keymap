@@ -141,6 +141,13 @@
             timeout-ms = <200>;
             require-prior-idle-ms = <500>;
         };
+
+        ret {
+            bindings = <&kp RET>;
+            key-positions = <7 8>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <500>;
+        };
     };
 
     //
@@ -251,7 +258,7 @@
             bindings = <
 &trans  &none        &ht_ck 0 C     &ht_npi K L  &kp D                      &key_repeat    &kp BSPC         &ht_ing 0 I              &kp O                   &ht_qu 0 U             &none         &trans
 &trans  &ht_npi J M  &ht_npi B S    &ht_npi V R  &ht_npi W T                &key_repeat    &kp Y            &htr RGUI E              &htrs RIGHT_SHIFT A     &htr RALT H            &kp P         &trans
-&trans  &kp W        &ht_npi TAB Q  &sl 3        &ht_npi DOUBLE_QUOTES SQT  &none          &none            &ht_npi BACKSLASH SLASH  &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &htr RCTRL G  &trans
+&trans  &kp F        &ht_npi TAB Q  &sl 3        &ht_npi DOUBLE_QUOTES SQT  &none          &none            &ht_npi BACKSLASH SLASH  &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &htr RCTRL G  &trans
                                     &none        &lt 1 N                    &sl 4          &sk RIGHT_SHIFT  &lt 2 SPACE              &none
             >;
 
