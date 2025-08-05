@@ -259,7 +259,7 @@
 &trans  &none        &ht_ck 0 C     &ht_npi K L  &kp D                      &key_repeat    &kp BSPC         &ht_ing 0 I              &kp O                   &ht_qu 0 U             &none         &trans
 &trans  &ht_npi J M  &ht_npi B S    &ht_npi V R  &ht_npi W T                &key_repeat    &kp Y            &htr RGUI E              &htrs RIGHT_SHIFT A     &htr RALT H            &kp P         &trans
 &trans  &kp F        &ht_npi TAB Q  &sl 3        &ht_npi DOUBLE_QUOTES SQT  &none          &none            &ht_npi BACKSLASH SLASH  &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &htr RCTRL G  &trans
-                                    &none        &lt 1 N                    &sl 4          &sk RIGHT_SHIFT  &lt 2 SPACE              &none
+                                    &tog 6       &lt 1 N                    &sl 4          &sk RIGHT_SHIFT  &lt 2 SPACE              &none
             >;
 
             label = "Alphabet";
@@ -335,6 +335,15 @@
             >;
 
             label = "System";
+        };
+
+        QWERT {
+            bindings = <
+&trans  &kp Q  &kp W  &kp E   &kp R    &kp T        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp A  &kp S  &kp D   &kp F    &kp G        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Z  &kp X  &kp C   &kp V    &kp B        &trans  &trans  &trans  &trans  &trans  &trans
+                      &tog 0  &kp TAB  &kp SPACE    &trans  &trans  &trans
+            >;
         };
     };
 
