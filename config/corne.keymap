@@ -116,13 +116,238 @@
             require-prior-idle-ms = <0>;
             hold-trigger-on-release;
         };
+
+        ht_make: ht_make {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_MAKE";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&m_a_k_e>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_mp: ht_mp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_MP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&m_p>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_dy: ht_dy {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_DY";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&d_y>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_ly: ht_ly {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_LY";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&l_y>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_ty: ht_ty {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_TY";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&t_y>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_ry: ht_ry {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_RY";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&r_y>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_you: ht_you {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_YOU";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&y_o_u>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_ye: ht_ye {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_YE";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&y_e>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_ay: ht_ay {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_AY";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&a_y>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_gh: ht_gh {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_GH";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&g_h>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_my: ht_my {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_MY";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&m_y>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_xp: ht_xp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_XP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&x_p>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_by: ht_by {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_BY";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&b_y>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_fy: ht_fy {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_FY";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&f_y>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
+
+        ht_wh: ht_wh {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_WH";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&w_h>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
         SYS_LAYER {
-            bindings = <&mo 6>;
+            bindings = <&mo 7>;
             key-positions = <38 37 36>;
             timeout-ms = <200>;
             require-prior-idle-ms = <500>;
@@ -153,35 +378,11 @@
     //
 
     macros {
-        colon_eq: coleq {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp COLON &kp EQUAL>;
-            label = "COLEQ";
-            wait-ms = <5>;
-        };
-
         q_u: q_u {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp Q &kp U>;
             label = "Q_U";
-            wait-ms = <5>;
-        };
-
-        wez_narrow: wez_narrow {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(RC(RG(RS(SPACE)))) &kp N9>;
-            label = "WEZ_NARROW";
-            wait-ms = <5>;
-        };
-
-        wez_rand: wez_rand {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RA(RC(RG(RS(SPACE)))) &kp R>;
-            label = "WEZ_RAND";
             wait-ms = <5>;
         };
 
@@ -206,40 +407,145 @@
             label = "I_N_G";
         };
 
-        w_h: w_h {
+        sp_w_h: sp_w_h {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp W &kp H>;
-            label = "W_H";
+            label = "SP_W_H";
             wait-ms = <15>;
             tap-ms = <15>;
         };
 
-        w_j: w_j {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE &kp W &kp J>;
-            label = "W_J";
-            wait-ms = <15>;
-            tap-ms = <15>;
-        };
-
-        w_k: w_k {
+        sp_w_k: sp_w_k {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp W &kp K>;
-            label = "W_K";
+            label = "SP_W_K";
             wait-ms = <15>;
             tap-ms = <15>;
         };
 
-        w_l: w_l {
+        sp_w_l: sp_w_l {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp W &kp L>;
-            label = "W_L";
+            label = "SP_W_L";
             wait-ms = <15>;
             tap-ms = <15>;
+        };
+
+        sp_w_j: sp_w_j {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp W &kp J>;
+            label = "SP_W_J";
+            wait-ms = <15>;
+            tap-ms = <15>;
+        };
+
+        m_p: m_p {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp P>;
+            label = "M_P";
+        };
+
+        d_y: d_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp Y>;
+            label = "D_Y";
+        };
+
+        l_y: l_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp Y>;
+            label = "L_Y";
+        };
+
+        t_y: t_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp Y>;
+            label = "T_Y";
+        };
+
+        r_y: r_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp Y>;
+            label = "R_Y";
+        };
+
+        y_o_u: y_o_u {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp O &kp U>;
+            label = "Y_O_U";
+        };
+
+        f_y: f_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp Y>;
+            label = "F_Y";
+        };
+
+        a_y: a_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp Y>;
+            label = "A_Y";
+        };
+
+        y_e: y_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp E>;
+            label = "Y_E";
+        };
+
+        g_h: g_h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp H>;
+            label = "G_H";
+        };
+
+        b_y: b_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp B &kp Y>;
+            label = "B_Y";
+        };
+
+        m_a_k_e: m_a_k_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp A &kp K &kp E>;
+            label = "M_A_K_E";
+        };
+
+        x_p: x_p {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp X &kp P>;
+            label = "X_P";
+        };
+
+        m_y: m_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp Y>;
+            label = "M_Y";
+        };
+
+        w_h: w_h {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp W &kp H>;
+            label = "W_H";
         };
     };
 
@@ -256,13 +562,24 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none  &ht_ck 0 C   &ht_npi W L  &ht_npi K D  &kp ESCAPE                   &kp BSPC         &ht_ing 0 I              &kp O                   &ht_qu 0 U             &none         &trans
-&trans  &kp M  &ht_npi J S  &ht_npi V R  &ht_npi B T  &ht_npi TAB Q                &kp Y            &htr RGUI E              &htrs RIGHT_SHIFT A     &htr RALT H            &kp P         &trans
-&trans  &kp F  &sl 5        &sl 3        &sl 4        &none                        &none            &ht_npi BACKSLASH SLASH  &ht LEFT_BRACKET COMMA  &ht RIGHT_BRACKET DOT  &htr RCTRL G  &trans
-                            &none        &lt 1 N      &ht_npi DOUBLE_QUOTES SQT    &sk RIGHT_SHIFT  &lt 2 SPACE              &none
+&trans  &none        &ht_mp 0 P  &ht_ly 0 L  &ht_dy 0 D  &none                &none            &ht_ing 0 I  &ht_you 0 O  &ht_qu 0 U  &none  &trans
+&trans  &ht LCTRL S  &ht_ck 0 C  &ht_ry 0 R  &ht_ty 0 T  &none                &none            &ht_ye 0 E   &ht_ay 0 A   &ht_gh 0 H  &sl 1  &trans
+&trans  &none        &none       &none       &none       &none                &none            &none        &none        &none       &none  &trans
+                                 &none       &lt 2 N     &ht_npi GRAVE SQT    &sk RIGHT_SHIFT  &lt 3 SPACE  &none
             >;
 
             label = "Alphabet";
+        };
+
+        ALPHA2 {
+            bindings = <
+&trans  &trans  &ht_make 0 K  &kp G   &ht_by 0 B  &trans    &trans  &kp Z                      &ht_xp 0 X               &kp Y   &trans  &trans
+&trans  &kp Q   &ht_wh 0 W    &kp M   &ht_fy 0 F  &trans    &trans  &ht_npi EXCLAMATION COMMA  &ht_npi QUESTION PERIOD  &kp V   &trans  &trans
+&trans  &trans  &trans        &trans  &trans      &trans    &trans  &trans                     &trans                   &trans  &trans  &trans
+                              &trans  &trans      &trans    &trans  &trans                     &trans
+            >;
+
+            label = "Alpha 2";
         };
 
         SYMNUM {
@@ -318,7 +635,7 @@
             bindings = <
 &none  &none  &none  &none      &none                      &none    &kp RS(RA(H))  &kp RS(RA(J))  &kp RS(RA(K))  &kp RS(RA(L))  &none  &none
 &none  &none  &none  &wez_rand  &none                      &none    &none          &none          &none          &none          &none  &none
-&none  &j_j   &none  &none      &kp RS(RA(RC(RG(SPACE))))  &none    &w_h           &w_j           &w_k           &w_l           &none  &none
+&none  &j_j   &none  &none      &kp RS(RA(RC(RG(SPACE))))  &none    &sp_w_h        &w_j           &sp_w_k        &sp_w_l        &none  &none
                      &none      &wez_narrow                &none    &none          &none          &none
             >;
 
