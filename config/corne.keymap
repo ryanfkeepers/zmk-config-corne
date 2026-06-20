@@ -362,7 +362,7 @@
         compatible = "zmk,combos";
 
         SYS_LAYER {
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
             key-positions = <38 37 36>;
             timeout-ms = <200>;
             require-prior-idle-ms = <500>;
@@ -562,6 +562,15 @@
             bindings = <&kp W &kp H>;
             label = "W_H";
         };
+
+        sp_f_w: sp_f_w {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp F &kp G>;
+            label = "SP_F_W";
+            wait-ms = <15>;
+            tap-ms = <15>;
+        };
     };
 
     keymap {
@@ -626,32 +635,21 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans              &kp LG(LEFT_BRACE)  &kp LG(LS(SPACE))  &kp RG(RIGHT_BRACE)  &trans           &trans          &kp LC(D)       &kp LC(U)     &kp PERCENT      &trans      &trans
-&trans  &kp LC(LEFT_ARROW)  &sk LEFT_ALT        &sk LEFT_SHIFT     &sk LEFT_GUI         &kp RC(RIGHT)    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp DOLLAR  &trans
-&trans  &trans              &kp LG(LEFT_ARROW)  &kp LG(TAB)        &kp RG(RIGHT_ARROW)  &trans           &kp H           &kp J           &kp K         &kp L            &kp LCTRL   &trans
-                                                &trans             &trans               &key_repeat      &trans          &trans          &trans
+&trans  &trans   &kp LG(LEFT_BRACE)  &kp LG(LS(SPACE))  &kp RG(RIGHT_BRACE)  &trans    &trans  &kp LC(PERCENT)       &kp LC(U)             &kp RC(D)           &trans           &trans
+&trans  &sp_f_w  &sk LEFT_ALT        &sk LEFT_SHIFT     &sk LEFT_GUI         &trans    &trans  &ht_npi H LEFT_ARROW  &ht_npi J DOWN_ARROW  &ht_npi K UP_ARROW  &ht_npi L RIGHT  &trans
+&trans  &trans   &trans              &trans             &trans               &trans    &trans  &trans                &trans                &trans              &trans           &trans
+                                     &trans             &mo 4                &none     &trans  &trans                &trans
             >;
 
             label = "VimNav";
         };
 
-        LEADER {
-            bindings = <
-&none  &none  &kp LG(X)  &none  &kp DELETE  &none    &none      &none  &none      &kp RG(Z)  &none      &none
-&none  &none  &kp LG(S)  &none  &none       &none    &kp RG(C)  &none  &kp RG(A)  &none      &kp RG(V)  &none
-&none  &j_j   &none      &none  &none       &none    &none      &none  &none      &none      &j_j       &none
-                         &none  &none       &none    &none      &none  &none
-            >;
-
-            label = "LEAD";
-        };
-
         Window {
             bindings = <
-&none  &none  &none  &none      &none                      &none    &kp RS(RA(H))  &kp RS(RA(J))  &kp RS(RA(K))  &kp RS(RA(L))  &none  &none
-&none  &none  &none  &wez_rand  &none                      &none    &none          &none          &none          &none          &none  &none
-&none  &j_j   &none  &none      &kp RS(RA(RC(RG(SPACE))))  &none    &sp_w_h        &w_j           &sp_w_k        &sp_w_l        &none  &none
-                     &none      &wez_narrow                &none    &none          &none          &none
+&none  &none  &kp LS(LA(MINUS))  &kp LS(LA(H))  &kp LS(LA(J))  &none    &none  &kp RS(RA(K))  &kp RS(RA(L))  &kp RS(RA(EQUAL))  &none  &none
+&none  &none  &none              &sp_w_h        &sp_w_j        &none    &none  &sp_w_k        &sp_w_l        &none              &none  &none
+&none  &none  &none              &none          &none          &none    &none  &none          &none          &none              &none  &none
+                                 &none          &trans         &none    &none  &trans         &none
             >;
 
             label = "WIN";
