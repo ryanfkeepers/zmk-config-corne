@@ -341,6 +341,21 @@
             require-prior-idle-ms = <0>;
             hold-trigger-on-release;
         };
+
+        ht_jj: ht_jj {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_JJ";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&j_j>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
     };
 
     combos {
@@ -573,10 +588,10 @@
 
         ALPHA2 {
             bindings = <
-&trans  &trans  &ht_make 0 K  &kp G   &ht_by 0 B  &trans    &trans  &kp Z                      &ht_xp 0 X               &kp Y   &trans  &trans
-&trans  &kp Q   &ht_wh 0 W    &kp M   &ht_fy 0 F  &trans    &trans  &ht_npi EXCLAMATION COMMA  &ht_npi QUESTION PERIOD  &kp V   &trans  &trans
-&trans  &trans  &trans        &trans  &trans      &trans    &trans  &trans                     &trans                   &trans  &trans  &trans
-                              &trans  &trans      &trans    &trans  &trans                     &trans
+&trans  &trans  &ht_make 0 K  &kp G   &ht_by 0 B  &trans      &trans     &kp Z                      &ht_xp 0 X               &kp Y   &trans  &trans
+&trans  &kp Q   &ht_wh 0 W    &kp M   &ht_fy 0 F  &trans      &trans     &ht_npi EXCLAMATION COMMA  &ht_npi QUESTION PERIOD  &kp V   &trans  &trans
+&trans  &trans  &trans        &trans  &trans      &trans      &trans     &trans                     &trans                   &trans  &trans  &trans
+                              &trans  &ht_jj 0 J  &kp LCMD    &kp RSHFT  &kp RALT                   &trans
             >;
 
             label = "Alpha 2";
@@ -592,10 +607,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &trans               &ht TILDE GRAVE    &ht COLON SEMICOLON   &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &trans            &sk RGUI            &ht PLUS EQUAL  &ht_npi Z X       &ht UNDERSCORE MINUS  &trans  &trans
-&trans  &ht DOLLAR NUMBER_4  &ht HASH NUMBER_3  &ht AT_SIGN NUMBER_2  &ht EXCLAMATION NUMBER_1                &ht PERCENT N5    &ht CARET NUMBER_6  &kp N0          &ht AMPERSAND N7  &ht ASTERISK N8       &kp N9  &trans
-&trans  &trans               &trans             &trans                &trans                                  &trans            &none               &trans          &trans            &trans                &trans  &trans
-                                                &trans                &trans                                  &trans            &kp RIGHT_SHIFT     &kp RIGHT_ALT   &trans
+&trans  &trans                &kp TAB          &ht NUMBER_9 NUMBER_4  &ht RIGHT_PARENTHESIS LEFT_PARENTHESIS  &trans      &trans           &ht PLUS EQUAL                         &ht_npi COLON SEMICOLON                  &ht UNDERSCORE MINUS            &trans  &trans
+&trans  &ht PERCENT NUMBER_5  &ht N8 NUMBER_3  &ht N7 NUMBER_2        &ht NUMBER_6 NUMBER_1                   &trans      &trans           &ht_npi LEFT_BRACKET LEFT_PARENTHESIS  &ht_npi RIGHT_BRACKET RIGHT_PARENTHESIS  &ht_npi NON_US_BACKSLASH SLASH  &kp N0  &trans
+&trans  &trans                &trans           &trans                 &trans                                  &trans      &trans           &trans                                 &trans                                   &trans                          &trans  &trans
+                                               &trans                 &trans                                  &kp LCMD    &kp RIGHT_SHIFT  &kp RIGHT_ALT                          &trans
             >;
 
             label = "SymNum";
