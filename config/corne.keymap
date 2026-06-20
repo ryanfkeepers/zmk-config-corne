@@ -593,8 +593,8 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &none        &ht_mp 0 P  &ht_ly 0 L  &ht_dy 0 D  &none                &none            &ht_ing 0 I  &ht_you 0 O  &ht_qu 0 U  &none  &trans
-&trans  &ht LCTRL S  &ht_ck 0 C  &ht_ry 0 R  &ht_ty 0 T  &none                &none            &ht_ye 0 E   &ht_ay 0 A   &ht_gh 0 H  &sl 1  &trans
+&trans  &none        &ht_mp 0 P  &ht_dy 0 D  &ht_ly 0 L  &none                &none            &ht_ing 0 I  &ht_you 0 O  &ht_qu 0 U  &none  &trans
+&trans  &ht LCTRL S  &ht_ck 0 C  &ht_ty 0 T  &ht_ry 0 R  &none                &none            &ht_ye 0 E   &ht_ay 0 A   &ht_gh 0 H  &sl 1  &trans
 &trans  &none        &none       &none       &none       &none                &none            &none        &none        &none       &none  &trans
                                  &none       &lt 2 N     &ht_npi GRAVE SQT    &sk RIGHT_SHIFT  &lt 3 SPACE  &none
             >;
