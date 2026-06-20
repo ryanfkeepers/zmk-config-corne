@@ -653,10 +653,10 @@
 
         Window {
             bindings = <
-&none  &none  &kp LS(LA(MINUS))  &kp LS(LA(H))  &kp LS(LA(J))  &none    &none  &kp RS(RA(K))  &kp RS(RA(L))  &kp RS(RA(EQUAL))  &none  &none
-&none  &none  &none              &sp_w_h        &sp_w_j        &none    &none  &sp_w_k        &sp_w_l        &none              &none  &none
-&none  &none  &none              &none          &none          &none    &none  &none          &none          &none              &none  &none
-                                 &none          &trans         &none    &none  &trans         &none
+&none  &none                       &kp LS(LA(MINUS))  &kp LS(LA(H))  &kp LS(LA(J))  &none    &none  &kp RS(RA(K))  &kp RS(RA(L))  &kp RS(RA(EQUAL))  &none  &none
+&none  &sk LG(LA(LC(LEFT_SHIFT)))  &none              &sp_w_h        &sp_w_j        &none    &none  &sp_w_k        &sp_w_l        &none              &none  &none
+&none  &none                       &none              &none          &none          &none    &none  &none          &none          &none              &none  &none
+                                                      &none          &trans         &none    &none  &trans         &none
             >;
 
             label = "WIN";
