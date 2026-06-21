@@ -356,6 +356,21 @@
             require-prior-idle-ms = <0>;
             hold-trigger-on-release;
         };
+
+        ht_from: ht_from {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_FROM";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&f_r_o_m>, <&kp>;
+
+            quick-tap-ms = <175>;
+            global-quick-tap;
+            require-prior-idle-ms = <0>;
+            hold-trigger-on-release;
+        };
     };
 
     combos {
@@ -378,8 +393,8 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <4 2>;
-            timeout-ms = <200>;
-            require-prior-idle-ms = <500>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <150>;
         };
 
         ret {
@@ -394,6 +409,16 @@
             key-positions = <19 20>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
+        };
+
+        oy {
+            bindings = <&o_y>;
+            key-positions = <9 8>;
+        };
+
+        ey {
+            bindings = <&e_y>;
+            key-positions = <19 9>;
         };
     };
 
@@ -578,6 +603,27 @@
             wait-ms = <15>;
             tap-ms = <15>;
         };
+
+        f_r_o_m: f_r_o_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp R &kp O &kp M>;
+            label = "F_R_O_M";
+        };
+
+        o_y: o_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp O &kp Y>;
+            label = "O_Y";
+        };
+
+        e_y: e_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp Y>;
+            label = "E_Y";
+        };
     };
 
     keymap {
@@ -604,10 +650,10 @@
 
         ALPHA2 {
             bindings = <
-&trans  &trans  &ht_make 0 K  &kp G   &ht_by 0 B  &trans      &trans     &kp Z                      &ht_xp 0 X               &kp Y   &trans  &trans
-&trans  &kp Q   &ht_wh 0 W    &kp M   &ht_fy 0 F  &trans      &trans     &ht_npi EXCLAMATION COMMA  &ht_npi QUESTION PERIOD  &kp V   &trans  &trans
-&trans  &trans  &trans        &trans  &trans      &trans      &trans     &trans                     &trans                   &trans  &trans  &trans
-                              &trans  &ht_jj 0 J  &kp LCMD    &kp RSHFT  &kp RALT                   &trans
+&trans  &trans  &ht_make 0 K  &kp G         &ht_by 0 B  &trans      &trans     &kp Z                      &ht_xp 0 X               &kp Y   &trans  &trans
+&trans  &kp Q   &ht_wh 0 W    &ht_from 0 M  &ht_fy 0 F  &trans      &trans     &ht_npi EXCLAMATION COMMA  &ht_npi QUESTION PERIOD  &kp V   &trans  &trans
+&trans  &trans  &trans        &trans        &trans      &trans      &trans     &trans                     &trans                   &trans  &trans  &trans
+                              &trans        &ht_jj 0 J  &kp LCMD    &kp RSHFT  &kp RALT                   &trans
             >;
 
             label = "Alpha 2";
@@ -642,7 +688,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans   &kp LG(LEFT_BRACE)  &kp LG(LS(SPACE))  &kp RG(RIGHT_BRACE)  &trans    &trans  &kp LC(PERCENT)       &kp LC(U)             &kp RC(D)           &trans           &trans
+&trans  &trans   &kp LG(LEFT_BRACE)  &kp LG(LS(SPACE))  &kp RG(RIGHT_BRACE)  &trans    &trans  &kp LC(PERCENT)       &kp LC(D)             &kp RC(U)           &trans           &trans
 &trans  &sp_f_w  &sk LEFT_ALT        &sk LEFT_SHIFT     &sk LEFT_GUI         &trans    &trans  &ht_npi H LEFT_ARROW  &ht_npi J DOWN_ARROW  &ht_npi K UP_ARROW  &ht_npi L RIGHT  &trans
 &trans  &trans   &trans              &trans             &trans               &trans    &trans  &trans                &trans                &trans              &trans           &trans
                                      &trans             &mo 4                &none     &trans  &trans                &trans
