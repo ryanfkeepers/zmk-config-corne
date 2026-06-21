@@ -400,8 +400,8 @@
         ret {
             bindings = <&kp RET>;
             key-positions = <7 9>;
-            timeout-ms = <200>;
-            require-prior-idle-ms = <500>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <150>;
         };
 
         bksp {
@@ -414,11 +414,15 @@
         oy {
             bindings = <&o_y>;
             key-positions = <9 8>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <150>;
         };
 
         ey {
             bindings = <&e_y>;
             key-positions = <19 9>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <150>;
         };
     };
 
